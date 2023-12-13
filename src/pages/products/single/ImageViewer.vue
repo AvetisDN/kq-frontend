@@ -27,14 +27,14 @@ const current = ref(0);
         :src="images[current]"
         alt=""
         @click="current = index"
-        class="transition rounded cursor-pointer w-full max-h-[700px] object-contain"
+        class="transition rounded cursor-pointer w-full max-h-[580px] object-contain"
       />
       <button
         class="absolute top-1/2 -translate-y-1/2 left-0"
         @click="
           () => {
+            if (current === 0) current = images.length;
             current--;
-            if (current < 0) current = images.length - 1;
           }
         "
       >
