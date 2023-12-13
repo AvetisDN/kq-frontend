@@ -49,7 +49,7 @@ useHead({
         </div>
       </div>
     </div>
-    <div class="flex flex-col lg:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6">
+    <div class="flex flex-col md:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6">
       <div
         class="grow lg:basis-1/2 flex flex-col gap-4 lg:gap-6 xl:gap-10 2xl:gap-14 3xl:gap-20"
       >
@@ -104,7 +104,7 @@ useHead({
         </ul>
       </div>
       <div
-        class="hidden lg:flex grow lg:basis-1/2 bg-cover bg-center rounded xl:rounded-lg"
+        class="flex grow md:basis-1/2 bg-cover bg-center rounded xl:rounded-lg"
         style="background-image: url(/images/contact/img1.jpg)"
       ></div>
     </div>

@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer.vue";
 import CallToAction from "./components/footer/CallToAction.vue";
 import { computed, reactive } from "vue";
 import { useHead } from "@vueuse/head";
+import { useRouter } from "vue-router";
 
 const metaData = reactive({
   title: "KQ Pumps",
@@ -18,6 +19,10 @@ useHead({
       content: computed(() => metaData.description),
     },
   ],
+});
+const router = useRouter();
+router.afterEach(() => {
+  window.scrollTo(0, 0);
 });
 </script>
 

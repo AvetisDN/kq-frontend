@@ -10,27 +10,27 @@
         <div class="form-control required error">
           <label for="name">имя</label>
           <input type="text" id="name" />
-          <span>Error</span>
+          <span>Введите имя</span>
         </div>
         <div class="form-control required">
           <label for="phone">Телефон</label>
           <input type="tel" id="phone" />
-          <span>Error</span>
+          <span>Введите номер телефона</span>
         </div>
         <div class="form-control required">
           <label for="email">Email</label>
           <input type="email" id="email" />
-          <span>Error</span>
+          <span>Введите E-Mail</span>
         </div>
         <div class="form-control required">
           <label for="city">город</label>
           <input type="text" id="city" />
-          <span>Error</span>
+          <span>Введите название города</span>
         </div>
         <div class="form-control required lg:col-span-2">
           <label for="message">сообщение</label>
           <textarea id="message" rows="6"></textarea>
-          <span>Error</span>
+          <span>Введите ваше сообщение</span>
         </div>
         <div>
           <button

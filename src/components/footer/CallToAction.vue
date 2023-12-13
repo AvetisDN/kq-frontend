@@ -6,10 +6,7 @@ const router = useRouter();
 const show = ref(false);
 
 router.afterEach(() => {
-  if (
-    router.currentRoute.value.path === "/contact" ||
-    router.currentRoute.value.path === "/news"
-  ) {
+  if (router.currentRoute.value.path === "/contact") {
     show.value = false;
   } else {
     show.value = true;
@@ -21,7 +18,7 @@ router.afterEach(() => {
   <div
     v-if="show"
     class="relative bg-cover bg-center"
-    style="background-image: url('/src/assets/images/call-to-action.jpg')"
+    style="background-image: url('/images/call-to-action.jpg')"
   >
     <div
       class="w-full h-full flex flex-col items-center justify-center top-0 text-white gap-6 py-12 md:py-16 2xl:py-32"

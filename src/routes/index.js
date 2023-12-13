@@ -4,6 +4,9 @@ import Contact from "../pages/contacts/Contact.vue";
 import About from "../pages/about/About.vue";
 import News from "../pages/news/News.vue";
 import Post from "../pages/news/Post.vue";
+import ProductGroups from "../pages/products/ProductGroups.vue";
+import ProductGroup from "../pages/products/ProductGroup.vue";
+import Product from "../pages/products/Product.vue";
 
 const routes = [
   {
@@ -29,6 +32,20 @@ const routes = [
   {
     path: "/post/:id",
     component: Post,
+  },
+  {
+    path: "/products",
+    component: ProductGroups,
+    name: "ProductGroups",
+  },
+  {
+    path: "/products/:group",
+    component: ProductGroup,
+    name: "ProductGroup",
+  },
+  {
+    path: "/product/:id",
+    component: Product,
   },
 ];
 export const router = createRouter({

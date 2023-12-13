@@ -176,6 +176,20 @@
   .form-control.error span {
     @apply visible;
   }
+
+  .btn-tabs {
+    @apply text-sm sm:text-lg lg:text-xl 2xl:text-2xl font-bold text-shade-300 relative py-2 uppercase;
+  }
+  .btn-tabs.active {
+    @apply text-shade-900;
+  }
+  .btn-tabs::after {
+    @apply block absolute bottom-0 w-0 h-0.5 bg-shade-900 transition-all;
+    content: "";
+  }
+  .btn-tabs.active::after {
+    @apply w-full;
+  }
 }
 
 @media (max-height: 1100px) {

@@ -12,7 +12,7 @@ defineEmits(["toggle"]);
           <i class="icon-search"></i>
           <input
             autofocus
-            type="search"
+            type="text"
             id="search"
             class="focus:outline-none min-w-[50%] max-w-[100%] xl:text-lg font-600"
           />

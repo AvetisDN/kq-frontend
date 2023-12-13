@@ -32,18 +32,12 @@ onMounted(() => {
 const activeSlide = ref(0);
 
 const nextSlide = () => {
-  if (activeSlide.value < maxSlides - 1) {
-    activeSlide.value++;
-  } else {
-    activeSlide.value = maxSlides - 1;
-  }
+  activeSlide.value++;
+  if (activeSlide.value === maxSlides - 1) activeSlide.value = 0;
 };
 const prevSlide = () => {
-  if (activeSlide.value > 0) {
-    activeSlide.value--;
-  } else {
-    activeSlide.value = 0;
-  }
+  activeSlide.value--;
+  if (activeSlide.value < 0) activeSlide.value = maxSlides - 1;
 };
 
 watch(activeSlide, (newSlide, oldSlide) => {

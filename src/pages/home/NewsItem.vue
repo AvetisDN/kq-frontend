@@ -1,16 +1,22 @@
 <script setup>
-import moment from "moment";
 defineProps(["item"]);
 </script>
 
 <template>
   <li class="glide__slide news-item">
-    <img :src="item.image" alt="" />
-    <div class="date">
-      {{ item.date.format("DD.MM.YY") }}
-    </div>
-    <h4>{{ item.title }}</h4>
-    <p>{{ item.description }}</p>
+    <router-link :to="`/post/${item.id}`" class="news-item">
+      <img v-if="item.category !== 'video'" :src="item.image" alt="image" />
+      <div
+        v-if="item.category === 'video'"
+        v-html="item.video"
+        class="w-full"
+      ></div>
+      <div class="date">
+        {{ item.date }}
+      </div>
+      <h4>{{ item.title }}</h4>
+      <p>{{ item.description }}</p>
+    </router-link>
   </li>
 </template>
 

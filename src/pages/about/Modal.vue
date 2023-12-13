@@ -15,7 +15,7 @@ defineProps(["item", "index"]);
       <img
         :src="item.image"
         alt=""
-        class="w-full max-h-64 3xl:max-h-[400px] object-cover"
+        class="w-full max-h-64 3xl:max-h-[290px] object-cover"
       />
       <div
         class="mt-4 xl:mt-6 px-4 xl:px-8 3xl:px-10 flex flex-col gap-6 lg:gap-8 3xl:gap-12 modal-content overflow-auto grow-0 shrink"

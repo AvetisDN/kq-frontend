@@ -23,7 +23,7 @@ const data = [
       "Индустриальный парк Шанхай получает государственную премию Китая за инновации",
   },
   {
-    year: 2001,
+    year: 2002,
     image: "/images/about/2001.jpg",
     title: "Ввод в эксплуатацию индустриального парка Чжецян",
   },
@@ -112,7 +112,7 @@ const selected = ref(0);
           {{ item.year }}
         </button>
       </div>
-      <div class="flex flex-col gap-6">
+      <div class="flex flex-col gap-6 -translate-y-20">
         <img :src="data[selected].image" alt="" class="max-w-md w-full" />
         <div
           class="text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[96px] font-bold text-primary xl:leading-normal 2xl:leading-normal 3xl:leading-normal"
