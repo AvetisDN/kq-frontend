@@ -78,6 +78,6 @@ const getProductData = () => {
         <Docs :docs="product.docs" v-if="activeTab === 2" />
       </div>
     </div>
-    <NewsSection />
+    <NewsSection title="Новости" />
   </div>
 </template>

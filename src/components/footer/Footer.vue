@@ -41,7 +41,7 @@
     >
       <div class="uppercase flex gap-20 xl:gap-32">
         <span> 2023 © KQ.COM.RU ALL RIGHTS RESERVED </span>
-        <router-link to="/" class="hover:text-secondary"
+        <router-link to="/policy" class="hover:text-secondary"
           >ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</router-link
         >
       </div>

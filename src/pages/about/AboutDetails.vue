@@ -22,7 +22,7 @@ const close = () => {
 </script>
 
 <template>
-  <div class="my-10 lg:my-20 3xl:my-40">
+  <div class="my-10 lg:mb-20 3xl:myb-40">
     <div
       v-for="(item, index) in data"
       class="flex flex-col lg:flex-row justify-between gap-8 items-center mb-8 md:mb-10 lg:mb-12 xl:mb-16 2xl:mb-20 3xl:mb-24"

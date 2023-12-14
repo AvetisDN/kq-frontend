@@ -193,7 +193,7 @@ const getGroupData = () => {
       ]"
     />
 
-    <h1>Группа продукции</h1>
+    <h1>{{ dummyTitle }}</h1>
     <div
       class="flex flex-col 2xl:flex-row gap-4 xl:gap-6 mb-4 lg:mb-6 xl:mb-10 2xl:mb-16 3xl:mb-20"
     >

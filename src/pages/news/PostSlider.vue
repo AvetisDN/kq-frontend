@@ -29,7 +29,7 @@ const glide2 = new Glide(".glide2", {
   },
 });
 
-const maxSlides = 8;
+const maxSlides = props.items.length;
 
 onMounted(() => {
   glide2.mount();
@@ -39,7 +39,7 @@ const activeSlide = ref(0);
 
 const nextSlide = () => {
   activeSlide.value++;
-  if (activeSlide.value > maxSlides - 1) activeSlide.value = 0;
+  if (activeSlide.value > maxSlides) activeSlide.value = 0;
 };
 const prevSlide = () => {
   activeSlide.value--;

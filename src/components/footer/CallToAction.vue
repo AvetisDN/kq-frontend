@@ -1,12 +1,20 @@
 <script setup>
 import { useRouter } from "vue-router";
 import { ref } from "vue";
+import FeedbackModal from "../FeedbackModal.vue";
 
 const router = useRouter();
 const show = ref(false);
 
+const modal = ref(false);
+
+const toggleModal = () => (modal.value = !modal.value);
+
 router.afterEach(() => {
-  if (router.currentRoute.value.path === "/contact") {
+  if (
+    router.currentRoute.value.path === "/contact" ||
+    router.currentRoute.value.path === "/products"
+  ) {
     show.value = false;
   } else {
     show.value = true;
@@ -33,7 +41,14 @@ router.afterEach(() => {
         Калининград, Владивосток, Якутск и Севастополь, а также на территории
         Республики Беларусь.
       </p>
-      <button class="btn-large mt-10 lg:mt-[66px]">связаться с нами</button>
+      <button class="btn-large mt-10 lg:mt-[66px]" @click="toggleModal">
+        связаться с нами
+      </button>
     </div>
   </div>
+  <FeedbackModal
+    v-if="modal"
+    title="Связаться с нами"
+    :toggleModal="toggleModal"
+  />
 </template>

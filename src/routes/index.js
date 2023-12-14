@@ -7,6 +7,7 @@ import Post from "../pages/news/Post.vue";
 import ProductGroups from "../pages/products/ProductGroups.vue";
 import ProductGroup from "../pages/products/ProductGroup.vue";
 import Product from "../pages/products/Product.vue";
+import PrivacyPolicy from "../pages/static/PrivacyPolicy.vue";
 
 const routes = [
   {
@@ -46,6 +47,10 @@ const routes = [
   {
     path: "/product/:id",
     component: Product,
+  },
+  {
+    path: "/policy",
+    component: PrivacyPolicy,
   },
 ];
 export const router = createRouter({

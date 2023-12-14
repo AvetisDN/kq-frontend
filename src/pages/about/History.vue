@@ -112,7 +112,7 @@ const selected = ref(0);
           {{ item.year }}
         </button>
       </div>
-      <div class="flex flex-col gap-6 -translate-y-20">
+      <div class="flex flex-col gap-6 lg:-translate-y-32">
         <img :src="data[selected].image" alt="" class="max-w-md w-full" />
         <div
           class="text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[96px] font-bold text-primary xl:leading-normal 2xl:leading-normal 3xl:leading-normal"
