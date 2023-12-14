@@ -116,10 +116,10 @@
     @apply flex justify-between md:items-center flex-col md:flex-row gap-6;
   }
   .news-filter {
-    @apply flex gap-6;
+    @apply flex gap-2 lg:gap-6 flex-wrap;
   }
   .news-filter button {
-    @apply text-lg lg:text-xl 2xl:text-2xl font-bold text-shade-200 flex;
+    @apply text-base sm:text-lg lg:text-xl 2xl:text-2xl font-bold text-shade-200 flex;
   }
   .news-filter button span {
     @apply text-xs;
@@ -159,7 +159,7 @@
   }
   .form-control input,
   .form-control textarea {
-    @apply outline-none bg-white text-shade-900 rounded xl:rounded-lg border border-white transition-colors hover:border-shade-900 focus:border-shade-900 text-lg p-4 lg:p-6 xl:py-7 3xl:py-8;
+    @apply outline-none bg-white text-shade-900 rounded xl:rounded-lg border border-white transition-colors hover:border-shade-900 focus:border-shade-900 text-lg p-4 lg:p-6;
   }
   .form-control span {
     @apply text-error invisible;
@@ -190,6 +190,29 @@
   .btn-tabs.active::after {
     @apply w-full;
   }
+
+  /* .modal-form .form-control {
+    @apply flex flex-col gap-2 font-medium uppercase;
+  }
+  .modal-form .form-control input,
+  .modal-form .form-control textarea {
+    @apply text-base 2xl:text-lg p-4;
+  }
+  .modal-form .form-control span {
+    @apply text-error invisible;
+  }
+  .modal-form .form-control.required label::after {
+    content: "*";
+  }
+  .modal-form .form-control.error label {
+    @apply text-error;
+  }
+  .modal-form .form-control.error input {
+    @apply border-error;
+  }
+  .modal-form .form-control.error span {
+    @apply visible;
+  } */
 }
 
 @media (max-height: 1100px) {

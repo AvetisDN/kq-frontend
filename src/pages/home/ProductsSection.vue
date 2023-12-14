@@ -12,7 +12,9 @@
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
         <img src="/images/home/prod-1.png" alt="" />
-        <h4 class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl">
+        <h4
+          class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
+        >
           ВОДОСНАБЖЕНИЕ И ПОВЫШЕНИЕ ДАВЛЕНИЯ
         </h4>
       </router-link>
@@ -21,7 +23,9 @@
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
         <img src="/images/home/prod-2.png" alt="" />
-        <h4 class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl">
+        <h4
+          class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
+        >
           ВОДООТВЕДЕНИЕ
         </h4>
       </router-link>
@@ -30,7 +34,9 @@
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
         <img src="/images/home/prod-3.png" alt="" />
-        <h4 class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl">
+        <h4
+          class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
+        >
           Отопление
         </h4>
       </router-link>
@@ -39,7 +45,9 @@
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
         <img src="/images/home/prod-4.png" alt="" />
-        <h4 class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl">
+        <h4
+          class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
+        >
           Энергетика
         </h4>
       </router-link>

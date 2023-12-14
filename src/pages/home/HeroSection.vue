@@ -59,7 +59,7 @@ const sliderData = [
 
 <template>
   <div class="aspect-video bg-shade-900 flex justify-center items-center">
-    <video-background src="/video/bg.mp4" class="h-full relative">
+    <video-background src="/video/bg-crop.mp4" class="h-full relative">
       <div
         class="absolute w-full h-full bg-black bg-opacity-80 2xl:py-[72px] xl:py-14 lg:py-10 md:py-8 py-4 2xl:px-10 xl:px-8 lg:px-6 px-4 text-white"
       >

@@ -1,5 +1,5 @@
 <script setup>
-defineProps(["items", "type"]);
+const props = defineProps(["items", "type"]);
 
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
@@ -7,11 +7,10 @@ import { onMounted, ref, watch } from "vue";
 import NewsItem from "./NewsItem.vue";
 
 const glideConfig = {
-  // focusAt: 0,
+  focusAt: 0,
   type: "carousel",
   gap: 24,
   perView: 3,
-  rewind: true,
   breakpoints: {
     640: {
       perView: 1,
@@ -33,13 +32,13 @@ const nextSlide = () => {
   //if (activeSlide.value < newsData.length - 1) {
   activeSlide.value++;
   //}
-  if (activeSlide.value === items.length - 1) activeSlide.value = 0;
+  if (activeSlide.value === props.items.length - 1) activeSlide.value = 0;
 };
 const prevSlide = () => {
   //if (activeSlide.value > 0) {
   activeSlide.value--;
   // }
-  if (activeSlide.value === -1) activeSlide.value = items.length - 1;
+  if (activeSlide.value === -1) activeSlide.value = props.items.length - 1;
 };
 
 watch(activeSlide, (newSlide, oldSlide) => {

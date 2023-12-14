@@ -30,7 +30,7 @@ const changeTab = (n) => (activeTab.value = n);
     <Breadcrumbs
       :current="[
         {
-          title: 'Каталог',
+          title: 'Группы продукции',
           url: '/products',
         },
         {
@@ -61,6 +61,6 @@ const changeTab = (n) => (activeTab.value = n);
         <Docs :docs="product.docs" v-if="activeTab === 2" />
       </div>
     </div>
-    <NewsSection />
+    <NewsSection title="Новости" />
   </div>
 </template>

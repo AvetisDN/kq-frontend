@@ -30,7 +30,7 @@ const dummyProducts = [
   },
   {
     id: 4,
-    title: "KQDL, KQDW",
+    title: "KQSN",
     image: "/images/products/1/product4.png",
   },
   {
@@ -63,7 +63,7 @@ const dummyTitle = "ВОДОСНАБЖЕНИЕ И ПОВЫШЕНИЕ ДАВЛЕ�
     <Breadcrumbs
       :current="[
         {
-          title: 'Каталог',
+          title: 'Группы продукции',
           url: '/products',
         },
         {
@@ -72,7 +72,7 @@ const dummyTitle = "ВОДОСНАБЖЕНИЕ И ПОВЫШЕНИЕ ДАВЛЕ�
       ]"
     />
 
-    <h1>Группа продукции</h1>
+    <h1>{{ dummyTitle }}</h1>
     <div
       class="flex flex-col 2xl:flex-row gap-4 xl:gap-6 mb-4 lg:mb-6 xl:mb-10 2xl:mb-16 3xl:mb-20"
     >

@@ -4,14 +4,14 @@ defineProps(["current"]);
 
 <template>
   <div
-    class="flex gap-2 xl:gap-3 my-6 lg:my-8 2xl:my-10 items-center uppercase"
+    class="flex gap-2 xl:gap-3 my-6 lg:my-8 2xl:my-10 items-center uppercase flex-wrap"
   >
     <router-link to="/"> Главная </router-link>
     <i class="icon-right text-[10px]"></i>
     <a href="!#" class="text-primary" v-if="!Array.isArray(current)">
       {{ current }}
     </a>
-    <div v-else class="flex gap-2 xl:gap-3 items-center uppercase">
+    <div v-else class="flex gap-2 xl:gap-3 items-center uppercase flex-wrap">
       <div
         v-for="(link, index) in current"
         class="flex gap-2 xl:gap-3 items-center uppercase"
