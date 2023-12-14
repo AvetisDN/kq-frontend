@@ -4,6 +4,12 @@ import { onMounted, ref, watch } from "vue";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
+const props = defineProps({
+  items: {
+    type: Array,
+  },
+});
+
 const glide2 = new Glide(".glide2", {
   focusAt: 0,
   type: "carousel",
@@ -23,7 +29,7 @@ const glide2 = new Glide(".glide2", {
   },
 });
 
-const maxSlides = 8;
+const maxSlides = props.items.length;
 
 onMounted(() => {
   glide2.mount();
@@ -33,7 +39,7 @@ const activeSlide = ref(0);
 
 const nextSlide = () => {
   activeSlide.value++;
-  if (activeSlide.value > maxSlides - 1) activeSlide.value = 0;
+  if (activeSlide.value > maxSlides) activeSlide.value = 0;
 };
 const prevSlide = () => {
   activeSlide.value--;
@@ -65,10 +71,10 @@ watch(activeSlide, (newSlide, oldSlide) => {
     <div class="glide2">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li class="glide__slide">
-            <img src="/images/about/slider1.jpg" alt="" />
+          <li v-for="(item, index) in items" :key="index" class="glide__slide">
+            <img :src="item" alt="" />
           </li>
-          <li class="glide__slide">
+          <!--          <li class="glide__slide">
             <img src="/images/about/slider2.jpg" alt="" />
           </li>
           <li class="glide__slide">
@@ -88,7 +94,7 @@ watch(activeSlide, (newSlide, oldSlide) => {
           </li>
           <li class="glide__slide">
             <img src="/images/about/slider4.jpg" alt="" />
-          </li>
+          </li>-->
         </ul>
       </div>
     </div>
