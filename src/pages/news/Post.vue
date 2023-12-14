@@ -70,7 +70,7 @@ const getPostData = () => {
       <!--            <img src="/images/news/banner.jpg" alt="" class="mx-auto" />-->
     </div>
     <PostSlider
-      v-if="postData.loaded && postData.category !== 'video'"
+      v-if="postData.loaded && postData.sliderImages.length && postData.category !== 'video'"
       :items="postData.sliderImages"
     />
     <NewsSection title="Другие новости" />

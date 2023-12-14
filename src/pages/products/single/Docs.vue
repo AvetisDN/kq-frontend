@@ -1,5 +1,10 @@
 <script setup>
-defineProps(["docs"]);
+const props = defineProps({
+    docs: {
+        type: Array,
+    }
+});
+
 </script>
 
 <template>
@@ -8,7 +13,10 @@ defineProps(["docs"]);
   >
     <a
       :href="doc.file"
-      v-for="doc in docs"
+      target="_blank"
+      :download="doc.name"
+      v-for="(doc, index) in docs"
+      :key="index"
       class="border border-shade-300 rounded p-6 xl:p-8 h-[215px] flex flex-col justify-between"
     >
       <h3 class="col-span-2 text-lg lg:text-xl 2xl:text-2xl uppercase">

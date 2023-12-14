@@ -1,7 +1,8 @@
 <script setup>
 import Breadcrumbs from "../../components/Breadcrumbs.vue";
 import { useHead } from "@vueuse/head";
-import { product } from "./single/dummyProduct";
+/*import { product } from "./single/dummyProduct";*/
+import { products } from "./single/dummyProducts";
 import ImageViewer from "./single/ImageViewer.vue";
 import Info from "./single/Info.vue";
 import Tabs from "./single/Tabs.vue";
@@ -9,28 +10,44 @@ import Description from "./single/Description.vue";
 import Attributes from "./single/Attributes.vue";
 import Docs from "./single/Docs.vue";
 import NewsSection from "../home/NewsSection.vue";
-import { ref } from "vue";
-useHead({
-  title: `KQ Pumps :: ${product.name}`,
-  meta: [
-    {
-      name: `description`,
-      content: "this is product page",
-    },
-  ],
+import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
+
+
+onMounted(() => {
+    getProductData();
+    useHead({
+        title: `KQ Pumps :: ${product.value.name}`,
+        meta: [
+            {
+                name: `description`,
+                content: "this is product page",
+            },
+        ],
+    });
 });
+
+const product = ref({
+    loaded: false,
+})
 
 const activeTab = ref(0);
 
 const changeTab = (n) => (activeTab.value = n);
+
+const getProductData = () => {
+    product.value = products.find(item => +item.id === +route.params.id);
+    product.value.loaded = true;
+};
 </script>
 
 <template>
-  <div class="2xl:px-10 xl:px-8 lg:px-6 px-4">
+  <div v-if="product.loaded" class="2xl:px-10 xl:px-8 lg:px-6 px-4">
     <Breadcrumbs
       :current="[
         {
-          title: 'Каталог',
+          title: 'Группы продукции',
           url: '/products',
         },
         {
