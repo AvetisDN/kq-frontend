@@ -1,6 +1,10 @@
 <script setup>
+import FeedbackModal from "../../../components/FeedbackModal.vue";
 defineProps(["short", "attrs"]);
 import { ref } from "vue";
+const modal = ref(false);
+
+const toggleModal = () => (modal.value = !modal.value);
 </script>
 
 <template>
@@ -22,12 +26,17 @@ import { ref } from "vue";
       </div>
     </div>
     <div class="flex gap-4 xl:gap-6 mt-4 lg:mt-6 2xl:mt-8">
-      <button
+      <!-- <button
         class="btn bg-primary text-white hover:bg-secondary hover:border-secondary"
       >
         Заказать
-      </button>
-      <button class="btn">Задать вопрос</button>
+      </button> -->
+      <button class="btn" @click="toggleModal">Задать вопрос</button>
     </div>
   </div>
+  <FeedbackModal
+    v-if="modal"
+    title="Задать вопрос"
+    :toggleModal="toggleModal"
+  />
 </template>

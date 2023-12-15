@@ -20,6 +20,7 @@ onMounted(() => {
 //methods---
 const getPostData = () => {
   postData.value = newsData.find((item) => +item.id === +route.params.id);
+  console.log(postData.value);
   postData.value.loaded = true;
 };
 </script>
@@ -55,13 +56,13 @@ const getPostData = () => {
       <img
         v-if="postData.category !== 'video'"
         :src="postData.image"
-        class="w-full"
+        class="w-full max-w-[908px] mx-auto"
         alt="image"
       />
       <div
         v-if="postData.category === 'video'"
         v-html="postData.video"
-        class="w-full"
+        class="w-full max-w-[908px] mx-auto"
       ></div>
       <div
         class="flex flex-col gap-3 lg:gap-4 2xl:gap-6 max-w-[908px] mx-auto lg:text-xl"
@@ -70,10 +71,14 @@ const getPostData = () => {
       <!--            <img src="/images/news/banner.jpg" alt="" class="mx-auto" />-->
     </div>
     <PostSlider
-      v-if="postData.loaded && postData.sliderImages.length && postData.category !== 'video'"
+      v-if="
+        postData.loaded &&
+        postData.sliderImages?.length &&
+        postData.category !== 'video'
+      "
       :items="postData.sliderImages"
     />
-    <NewsSection title="Другие новости" />
+    <!-- <NewsSection title="Другие новости" /> -->
   </div>
 </template>
 

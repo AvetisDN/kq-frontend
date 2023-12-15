@@ -3,7 +3,7 @@
 <template>
   <div class="bg-shade-900 text-white">
     <div
-      class="flex text-base md:text-lg xl:text-2xl 3xl:text-[40px] leading-[40px] xl:leading-[55px] uppercase flex-col lg:flex-row"
+      class="flex text-base md:text-lg xl:text-xl 3xl:text-2xl leading-[40px] xl:leading-[55px] uppercase flex-col lg:flex-row"
     >
       <div
         class="flex py-10 justify-center items-center grow border-y border-white"
@@ -41,9 +41,9 @@
     >
       <div class="uppercase flex gap-20 xl:gap-32">
         <span> 2023 © KQ.COM.RU ALL RIGHTS RESERVED </span>
-        <router-link to="/policy" class="hover:text-secondary"
+        <!-- <router-link to="/policy" class="hover:text-secondary"
           >ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</router-link
-        >
+        > -->
       </div>
       <div>
         Информация, размещенная на сайте носит исключительно информационный

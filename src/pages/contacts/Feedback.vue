@@ -7,7 +7,7 @@
     <div class="mx-auto max-w-[1440px]">
       <h2 class="line">Связаться с нами</h2>
       <form class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4 2xl:gap-6">
-        <div class="form-control required error">
+        <div class="form-control required">
           <label for="name">имя</label>
           <input type="text" id="name" />
           <span>Введите имя</span>

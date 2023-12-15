@@ -49,16 +49,42 @@ useHead({
         </div>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6">
+    <div class="flex flex-col lg:flex-row gap-4 xl:gap-6 mt-6">
       <div
-        class="grow lg:basis-1/2 flex flex-col gap-4 lg:gap-6 xl:gap-10 2xl:gap-14 3xl:gap-20"
+        class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
       >
-        <div
-          class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col font-bold lg:text-lg xl:text-xl 3xl:text-2xl"
-        >
-          <h4 class="text-sm font-normal mb-4">Режим работы</h4>
-          <p>ПН - ПТ: с 09:00 до 18:00</p>
+        <h4 class="text-sm font-normal mb-4">Режим работы</h4>
+        <p>ПН - ПТ: с 09:00 до 18:00</p>
+      </div>
+      <div
+        class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col sm:flex-row font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
+      >
+        <div class="grow">
+          <h4 class="text-sm font-normal mb-4">Отел Технической Поддержки</h4>
+          <p>
+            <a href="mailto:ru_support@kaiquan.com.cn"
+              >ru_support@kaiquan.com.cn</a
+            >
+          </p>
         </div>
+        <div class="grow mt-10 sm:mt-0">
+          <h4 class="text-sm font-normal mb-4">
+            Отдел Логистики и Оформления Заказов
+          </h4>
+          <p>
+            <a href="mailto:ru_logistics@kaiqua.com.cn"
+              >ru_logistics@kaiqua.com.cn</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6 items-start"
+    >
+      <div
+        class="lg:basis-1/2 flex flex-col gap-4 lg:gap-6 xl:gap-10 2xl:gap-14 3xl:gap-20 basis-1/2"
+      >
         <h2 class="line mb-0">РЕКВИЗИТЫ</h2>
         <ul class="requisites">
           <li>
@@ -103,10 +129,10 @@ useHead({
           </li>
         </ul>
       </div>
-      <div
+      <!-- <div
         class="flex grow md:basis-1/2 bg-cover bg-center rounded xl:rounded-lg"
         style="background-image: url(/images/contact/img1.jpg)"
-      ></div>
+      ></div> -->
     </div>
     <div class="mt-40">
       <Map />

@@ -58,16 +58,18 @@ const sliderData = [
 </script>
 
 <template>
-  <div class="aspect-video bg-shade-900 flex justify-center items-center">
+  <div
+    class="aspect-video lg:aspect-auto lg:h-screen bg-shade-900 flex justify-center items-center max-h-[calc(100vh-65px)] xl:max-h-[calc(100vh-65px)] 2xl:max-h-[calc(100vh-85px)]"
+  >
     <video-background src="/video/bg-crop.mp4" class="h-full relative">
       <div
         class="absolute w-full h-full bg-black bg-opacity-80 2xl:py-[72px] xl:py-14 lg:py-10 md:py-8 py-4 2xl:px-10 xl:px-8 lg:px-6 px-4 text-white"
       >
-        <div class="absolute bottom-10 md:bottom-20 right-20 md:left-0">
+        <div class="absolute bottom-10 md:bottom-10 right-20 md:left-0">
           <img
             src="../../assets/images/lines-white.png"
             alt=""
-            class="w-40 md:w-64 lg:w-auto"
+            class="w-40 md:w-64 lg:w-80 3xl:w-auto"
           />
         </div>
         <div class="slider">
@@ -80,9 +82,7 @@ const sliderData = [
               <span>0{{ index + 1 }}</span>
               {{ item.title }}
             </button>
-            <Transition name="slide-down">
-              <h2 v-if="activeSlide === index">{{ item.header }}</h2>
-            </Transition>
+            <h2 v-if="activeSlide === index">{{ item.header }}</h2>
           </div>
           <div
             v-for="(item, index) in sliderData"

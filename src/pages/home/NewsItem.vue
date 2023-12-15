@@ -37,11 +37,11 @@ defineProps(["item"]);
 .glide__slide.news-item.glide__slide--active {
   @apply mr-10 2xl:mr-20 !important;
 }
-.glide__slide img {
-  @apply w-full object-cover h-[400px];
+.glide__slide.news-item img {
+  @apply w-full object-cover h-[320px] !important;
 }
 .glide__slide.news-item.glide__slide--active img {
-  @apply h-[480px];
+  @apply h-[380px] !important;
 }
 @media (max-width: 640px) {
   .glide__slide img {

@@ -9,21 +9,21 @@ const props = defineProps({
 </script>
 
 <template>
-  <li class="news-item">
-    <img v-if="item.category !== 'video'" :src="item.image" alt="image" />
-    <div
-      v-if="item.category === 'video'"
-      v-html="item.video"
-      class="w-full"
-    ></div>
-    <div class="date">
-      {{ item.date }}
-    </div>
-    <h4>
-      <router-link :to="`/post/${item.id}`">
+  <li class="list-none">
+    <router-link :to="`/post/${item.id}`" class="news-item">
+      <img v-if="item.category !== 'video'" :src="item.image" alt="image" />
+      <div
+        v-if="item.category === 'video'"
+        v-html="item.video"
+        class="w-full"
+      ></div>
+      <div class="date">
+        {{ item.date }}
+      </div>
+      <h4>
         {{ item.title }}
-      </router-link>
-    </h4>
+      </h4>
+    </router-link>
   </li>
 </template>
 

@@ -10,13 +10,16 @@ const glideConfig = {
   focusAt: 0,
   type: "carousel",
   gap: 24,
-  perView: 3,
+  perView: 4,
   breakpoints: {
     640: {
       perView: 1,
     },
     1180: {
       perView: 2,
+    },
+    1440: {
+      perView: 3,
     },
   },
 };

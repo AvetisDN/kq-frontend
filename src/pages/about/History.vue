@@ -30,7 +30,7 @@ const data = [
   {
     year: 2003,
     image: "/images/about/2003.jpg",
-    title: "Продажи превысили 100 миллионов йен в месяц",
+    title: "Продажи превысили 100 миллионов юаней в месяц",
   },
   {
     year: 2005,
@@ -74,7 +74,7 @@ const data = [
   {
     year: 2020,
     image: "/images/about/2020.jpg",
-    title: "Продажи превысили 800 миллионов йен в месяц",
+    title: "Продажи превысили 800 миллионов юаней в месяц",
   },
   {
     year: 2021,
@@ -84,7 +84,8 @@ const data = [
   {
     year: 2022,
     image: "/images/about/2022.jpg",
-    title: "Основание российского представитльства KQ",
+    title:
+      "Открытие российского представительства концерна SHANGHAI KAIQUAN PUMP (GROUP)",
   },
 ];
 
@@ -112,7 +113,7 @@ const selected = ref(0);
           {{ item.year }}
         </button>
       </div>
-      <div class="flex flex-col gap-6 lg:-translate-y-32">
+      <div class="flex flex-col gap-6 lg:-translate-y-40">
         <img :src="data[selected].image" alt="" class="max-w-md w-full" />
         <div
           class="text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-[96px] font-bold text-primary xl:leading-normal 2xl:leading-normal 3xl:leading-normal"
@@ -120,12 +121,12 @@ const selected = ref(0);
           {{ data[selected].year }}
         </div>
         <div
-          class="text-xl md:text-3xl xl:text-[40px] xl:leading-normal 2xl:leading-normal 3xl:leading-normal"
+          class="text-xl md:text-2xl xl:text-3xl xl:leading-normal 2xl:leading-normal 3xl:leading-normal"
         >
           {{ data[selected].title }}
         </div>
         <div
-          class="text-xl md:text-3xl xl:text-[40px] xl:leading-tight 2xl:leading-tight 3xl:leading-tight"
+          class="text-xl md:text-2xl xl:text-3xl xl:leading-tight 2xl:leading-tight 3xl:leading-tight"
           v-if="data[selected].title2"
         >
           {{ data[selected].title2 }}
