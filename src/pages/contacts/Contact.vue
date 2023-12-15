@@ -3,6 +3,15 @@ import Map from "./Map.vue";
 import Feedback from "./Feedback.vue";
 import Breadcrumbs from "../../components/Breadcrumbs.vue";
 import { useHead } from "@vueuse/head";
+import {onMounted, computed, ref} from "vue";
+import axios from "axios"
+
+import {contactsStore} from "./contactsStore";
+
+const store = contactsStore();
+
+const contact = ref({});
+const contactLoaded = ref(false);
 
 useHead({
   title: "KQ Pumps :: Контакты",
@@ -13,10 +22,17 @@ useHead({
     },
   ],
 });
+
+onMounted( async () => {
+	const {data} = await axios.get('/api/contacts');
+	store.data = data.data;
+	contact.value = data.data.contacts;
+	contactLoaded.value = true;
+})
 </script>
 
 <template>
-  <div class="2xl:px-10 xl:px-8 lg:px-6 px-4">
+  <div class="2xl:px-10 xl:px-8 lg:px-6 px-4" v-if="contactLoaded">
     <Breadcrumbs current="Контакты" />
 
     <h1>Контакты</h1>
@@ -25,26 +41,21 @@ useHead({
         class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
       >
         <h4 class="text-sm font-normal mb-4">центральный офис</h4>
-        <p>ООО “КЕЙ КЬЮ” 123592</p>
-        <p>Москва, Кулакова, 20, корпус 1</p>
-        <p>Технопарк “Орбита”, корпус “Альфа”</p>
+        <p v-html="contact.address.replace(/\n/g, '<br>')"></p>
       </div>
       <div
         class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col sm:flex-row font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
       >
         <div class="grow">
           <h4 class="text-sm font-normal mb-4">Телефон</h4>
-          <p>
-            <a href="tel:88003336666">8 800 333-66-66</a>
-          </p>
-          <p>
-            <a href="tel:84951838883">8 495 183-88-83</a>
+          <p v-for="item in contact.phones">
+            <a :href="'tel:'+item.phone">{{ item.phone }}</a>
           </p>
         </div>
         <div class="grow mt-10 sm:mt-0">
           <h4 class="text-sm font-normal mb-4">EMAIL</h4>
-          <p>
-            <a href="mailto:russia@kaiquan.com.cn">russia@kaiquan.com.cn</a>
+          <p v-for="item in contact.emails">
+            <a :href="'mailto:' + item.email">{{ item.email }}</a>
           </p>
         </div>
       </div>
@@ -54,7 +65,7 @@ useHead({
         class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
       >
         <h4 class="text-sm font-normal mb-4">Режим работы</h4>
-        <p>ПН - ПТ: с 09:00 до 18:00</p>
+        <p>{{ contact.working_hours }}</p>
       </div>
       <div
         class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col sm:flex-row font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
@@ -89,39 +100,39 @@ useHead({
         <ul class="requisites">
           <li>
             <span>Полное наименование</span>
-            <p>ООО "КЕЙ КЬЮ"</p>
+            <p>{{ contact.requisite_name }}</p>
           </li>
           <li>
             <span>юридический адрес</span>
-            <p>123592, г.Москва, ул.Кулакова, д.20, стр. 1</p>
+            <p>{{ contact.requisite_address }}</p>
           </li>
           <li>
             <span>инн</span>
-            <p>7734464841</p>
+            <p>{{ contact.requisite_inn }}</p>
           </li>
           <li>
             <span>КПП</span>
-            <p>773401001</p>
+            <p>{{ contact.requisite_kpp }}</p>
           </li>
           <li>
             <span>огрн</span>
-            <p>1227700771715</p>
+            <p>{{ contact.requisite_ogrn }}</p>
           </li>
           <li>
             <span>окпо</span>
-            <p>78988225</p>
+            <p>{{ contact.requisite_okpo }}</p>
           </li>
           <li>
             <span>БАНК</span>
-            <p>ПАО "Сбербанк" г.Москва</p>
+            <p>{{ contact.requisite_bank }}</p>
           </li>
           <li>
             <span>р/с</span>
-            <p>40702810238000217808</p>
+            <p>{{ contact.requisite_rs }}</p>
           </li>
           <li>
             <span>к/с</span>
-            <p>30101810400000000225</p>
+            <p>{{ contact.requisite_ks }}</p>
           </li>
           <li>
             <span>БИК</span>
