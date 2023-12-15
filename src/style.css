@@ -88,7 +88,7 @@
     @apply flex p-3 md:p-3 lg:p-3 xl:p-4 3xl:p-10 border-white border 2xl:border-r-0 2xl:last:border-r flex-col gap-0;
   }
   .digits-item h3 {
-    @apply text-3xl md:text-3xl lg:text-5xl 2xl:text-[64px] font-bold text-secondary;
+    @apply text-3xl md:text-3xl lg:text-5xl 2xl:text-[64px] font-bold text-secondary whitespace-nowrap;
   }
   .digits-item span {
     @apply text-base lg:text-xl font-medium;
@@ -218,8 +218,8 @@
   } */
 }
 
-@media (max-height: 1100px) {
-  .slider .digits {
-    /* @apply bottom-[110px]; */
+@media (min-width: 1921px) and (min-height: 1164px) {
+  .video-container {
+    max-height: 1080px !important;
   }
 }

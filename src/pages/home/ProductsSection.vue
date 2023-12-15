@@ -2,7 +2,7 @@
 
 <template>
   <div class="flex flex-col gap-6 md:gap-8 lg:gap-10 xl:gap-12">
-    <router-link class="big-link" to="/about">
+    <router-link class="big-link" to="/products">
       продукция
       <i class="icon-maximize"></i>
     </router-link>

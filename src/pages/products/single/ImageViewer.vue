@@ -19,15 +19,14 @@ const current = ref(0);
           'border-shade-900': current === index,
           'border-white': current !== index,
         }"
-        class="border-2 transition rounded hover:border-shade-300 max-w-[132px] aspect-square cursor-pointer"
+        class="border-2 transition rounded hover:border-shade-300 max-w-[132px] aspect-square cursor-pointer object-contain"
       />
     </div>
     <div class="relative grow max-w-[732px]">
       <img
         :src="images[current]"
         alt=""
-        @click="current = index"
-        class="transition rounded cursor-pointer w-full max-h-[580px] object-contain"
+        class="transition rounded cursor-pointer w-full max-h-[580px] object-contain object-center"
       />
       <button
         class="absolute top-1/2 -translate-y-1/2 left-0"

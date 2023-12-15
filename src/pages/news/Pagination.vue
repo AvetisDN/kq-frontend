@@ -1,5 +1,6 @@
 <script setup>
-defineProps(["current", "total", "changePage"]);
+const props = defineProps(["current", "total", "changePage"]);
+const totalPages = Math.ceil(props.total / 15);
 </script>
 
 <template>
@@ -12,7 +13,7 @@ defineProps(["current", "total", "changePage"]);
     </router-link>
     <!--  -->
     <router-link
-      v-for="n in [1, 2, 3, 4, 5]"
+      v-for="n in totalPages"
       class="numbers"
       :to="`/news${n === 1 ? '' : `/${n}`}`"
     >

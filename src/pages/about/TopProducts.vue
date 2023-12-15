@@ -5,7 +5,7 @@
     <h2 class="line">ГЛАВНЫЕ ПРОДУКТЫ</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
       <router-link
-        to="/products/1"
+        to="/product/10"
         class="relative hover:outline hover:outline-shade-300"
       >
         <img class="mx-auto" src="/images/about/top1.png" alt="" />
@@ -16,7 +16,7 @@
         </h4>
       </router-link>
       <router-link
-        to="/products/1"
+        to="/product/12"
         class="relative hover:outline hover:outline-shade-300"
       >
         <img class="mx-auto" src="/images/about/top2.png" alt="" />
@@ -27,7 +27,7 @@
         </h4>
       </router-link>
       <router-link
-        to="/products/1"
+        to="/product/17"
         class="relative hover:outline hover:outline-shade-300"
       >
         <img class="mx-auto" src="/images/about/top3.png" alt="" />
@@ -38,7 +38,7 @@
         </h4>
       </router-link>
       <router-link
-        to="/products/1"
+        to="/product/1"
         class="relative hover:outline hover:outline-shade-300"
       >
         <img class="mx-auto" src="/images/about/top4.png" alt="" />

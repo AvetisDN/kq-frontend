@@ -5,9 +5,9 @@ import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
 
 const props = defineProps({
-    items: {
-        type: Array,
-    },
+  items: {
+    type: Array,
+  },
 });
 
 const glide2 = new Glide(".glide2", {
@@ -72,9 +72,9 @@ watch(activeSlide, (newSlide, oldSlide) => {
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
           <li v-for="(item, index) in items" :key="index" class="glide__slide">
-            <img :src="item" alt="" />
+            <img :src="item" alt="" class="max-h-full object-cover" />
           </li>
-<!--          <li class="glide__slide">
+          <!--          <li class="glide__slide">
             <img src="/images/about/slider2.jpg" alt="" />
           </li>
           <li class="glide__slide">

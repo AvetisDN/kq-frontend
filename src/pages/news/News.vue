@@ -6,6 +6,11 @@ import { useRoute, useRouter } from "vue-router";
 import NewsItem from "./NewsItem.vue";
 import Pagination from "./Pagination.vue";
 import { newsData } from "./newsDummyData";
+import { storeToRefs } from "pinia";
+import { useNewsStore } from "../../store/news";
+
+const store = useNewsStore();
+const { newsType } = storeToRefs(store);
 
 useHead({
   title: "KQ Pumps :: Новости",
@@ -20,10 +25,9 @@ useHead({
 const route = useRoute();
 const router = useRouter();
 
-const activeType = ref(0);
 const activePage = ref(route.params.page ? +route.params.page : 1);
 const filteredNewsData = computed((type) => {
-  switch (activeType.value) {
+  switch (newsType.value) {
     case 0:
       return newsData;
     case 1:
@@ -54,16 +58,16 @@ router.afterEach(() => {
         class="flex flex-col 2xl:flex-row gap-4 md:gap-6 xl:gap-10 2xl:gap-14 3xl:gap-24 w-full"
       >
         <div class="news-types 3xl:grow 3xl:w-80 3xl:shrink-0">
-          <button :class="{ active: activeType === 0 }" @click="activeType = 0">
+          <button :class="{ active: newsType === 0 }" @click="newsType = 0">
             ВСЕ
           </button>
-          <button :class="{ active: activeType === 1 }" @click="activeType = 1">
+          <button :class="{ active: newsType === 1 }" @click="newsType = 1">
             НОВОСТИ
           </button>
-          <button :class="{ active: activeType === 2 }" @click="activeType = 2">
+          <button :class="{ active: newsType === 2 }" @click="newsType = 2">
             ПУБЛИКАЦИИ
           </button>
-          <button :class="{ active: activeType === 3 }" @click="activeType = 3">
+          <button :class="{ active: newsType === 3 }" @click="newsType = 3">
             ВИДЕО
           </button>
         </div>
@@ -78,12 +82,12 @@ router.afterEach(() => {
             />
           </div>
 
-          <!--          <Pagination
+          <Pagination
             :key="$route.path"
             :current="activePage"
-            :total="10"
+            :total="filteredNewsData.length"
             :changePage="changePage"
-          />-->
+          />
         </div>
       </div>
     </div>
