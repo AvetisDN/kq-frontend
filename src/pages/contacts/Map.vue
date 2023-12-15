@@ -32,16 +32,16 @@ const mapSettings = {
 
 <template>
 	<div class="mb-8 lg:mb-10 xl:mb-12 2xl:mb-14">
-		<h2 class="line">ПРЕДСТАВИТЕЛЬСТВА В РФ И РБ</h2>
+<!--		<h2 class="line">ПРЕДСТАВИТЕЛЬСТВА В РФ И РБ</h2>-->
 		<div class="-mx-4 lg:-mx-6 xl:-mx-8 2xl:-mx-10">
 			<yandex-map
 				:settings="mapSettings"
 			>
 			</yandex-map>
 		</div>
-		<div class="-mx-4 lg:-mx-6 xl:-mx-8 2xl:-mx-10">
-			<img src="/images/contact/map.jpg" alt=""/>
-		</div>
+<!--		<div class="-mx-4 lg:-mx-6 xl:-mx-8 2xl:-mx-10">-->
+<!--			<img src="/images/contact/map.jpg" alt=""/>-->
+<!--		</div>-->
 		<div class="my-8 lg:my-10 xl:my-12 3xl:my-14">
 			<div v-for="item in contactData.agencies">
 				<div
