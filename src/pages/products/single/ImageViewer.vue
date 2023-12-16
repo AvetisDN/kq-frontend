@@ -9,7 +9,9 @@ const current = ref(0);
   <div
     class="flex flex-col-reverse xl:flex-row gap-4 xl:gap-6 grow shrink-0 2xl:w-[800px]"
   >
-    <div class="flex flex-row xl:flex-col gap-4">
+    <div
+      class="flex flex-row xl:flex-col gap-4 max-h-[580px] overflow-auto pr-4"
+    >
       <img
         v-for="(image, index) in images"
         :src="image"
