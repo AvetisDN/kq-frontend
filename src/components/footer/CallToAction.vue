@@ -50,5 +50,6 @@ router.afterEach(() => {
     v-if="modal"
     title="Связаться с нами"
     :toggleModal="toggleModal"
+    :modal="modal"
   />
 </template>

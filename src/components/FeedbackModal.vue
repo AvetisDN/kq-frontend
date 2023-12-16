@@ -1,62 +1,67 @@
 <script setup>
-defineProps(["title", "toggleModal"]);
-import { ref, computed } from "vue";
+const props = defineProps(["title", "toggleModal", "modal"]);
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 
 const step = ref("form"); // 'success' | 'error'
 
-import {useToast} from "vue-toastification";
-import axios from "axios"
+onMounted(() => {
+  document.body.style.overflowY = "hidden";
+});
+onBeforeUnmount(() => {
+  document.body.style.overflowY = "auto";
+});
+
+import { useToast } from "vue-toastification";
+import axios from "axios";
 
 const toast = useToast();
 
-import { useVuelidate } from '@vuelidate/core'
-import { required, email } from '@vuelidate/validators'
+import { useVuelidate } from "@vuelidate/core";
+import { required, email } from "@vuelidate/validators";
 
 const formDataTemplate = {
-	name: '',
-	phone: '',
-	email: '',
-	city: '',
-	message: '',
-}
+  name: "",
+  phone: "",
+  email: "",
+  city: "",
+  message: "",
+};
 
 const formData = ref(Object.assign({}, formDataTemplate));
 
 const formSaving = ref(false);
 
 const rules = computed(() => {
-	return {
-		name: { required }, // Matches state.firstName
-		phone: { required }, // Matches state.lastName
-		city: { required }, // Matches state.lastName
-		message: { required }, // Matches state.lastName
-		email: { required, email } // Matches state.contact.email
-
-	}
+  return {
+    name: { required }, // Matches state.firstName
+    phone: { required }, // Matches state.lastName
+    city: { required }, // Matches state.lastName
+    message: { required }, // Matches state.lastName
+    email: { required, email }, // Matches state.contact.email
+  };
 });
 
-const v$ = useVuelidate(rules, formData)
-
+const v$ = useVuelidate(rules, formData);
 
 const sendForm = async () => {
-	if (formSaving.value) return;
-	await v$.value.$validate();
-	await v$.value.$touch();
-	if (v$.value.$error) return;
-	formSaving.value = true;
-	try {
-		const {data, status} = await axios.post('/api/feedback', formData.value);
-		if(status === 200){
-			toast.success("Ваше сообщение успешно отправлено");
-			formData.value = Object.assign({}, formDataTemplate);
-			v$.value.$reset();
-		}
-		formSaving.value = false;
-		step.value = 'success';
-	}catch (e){
-		formSaving.value = false;
-	}
-}
+  if (formSaving.value) return;
+  await v$.value.$validate();
+  await v$.value.$touch();
+  if (v$.value.$error) return;
+  formSaving.value = true;
+  try {
+    const { data, status } = await axios.post("/api/feedback", formData.value);
+    if (status === 200) {
+      toast.success("Ваше сообщение успешно отправлено");
+      formData.value = Object.assign({}, formDataTemplate);
+      v$.value.$reset();
+    }
+    formSaving.value = false;
+    step.value = "success";
+  } catch (e) {
+    formSaving.value = false;
+  }
+};
 </script>
 
 <template>
@@ -75,38 +80,56 @@ const sendForm = async () => {
         <i class="icon-close text-lg lg:text-xl 3xl:text-3xl"></i>
       </button>
       <h2 class="line">{{ title || "Связаться с нами" }}</h2>
-      <form class="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4 modal-form" @submit.prevent="sendForm">
-        <div class="form-control required" :class="{
-			'error': v$.name.$error && v$.name.$dirty
-        }">
+      <form
+        class="grid grid-cols-1 gap-3 lg:gap-4 modal-form"
+        @submit.prevent="sendForm"
+      >
+        <div
+          class="form-control required"
+          :class="{
+            error: v$.name.$error && v$.name.$dirty,
+          }"
+        >
           <label for="name">имя</label>
-          <input type="text" id="name" v-model="formData.name"  />
+          <input type="text" id="name" v-model="formData.name" />
           <span>Введите имя</span>
         </div>
-        <div class="form-control required" :class="{
-			'error': v$.phone.$error && v$.phone.$dirty
-        }">
+        <div
+          class="form-control required"
+          :class="{
+            error: v$.phone.$error && v$.phone.$dirty,
+          }"
+        >
           <label for="phone">Телефон</label>
-          <input type="tel" id="phone" v-model="formData.phone"  />
+          <input type="tel" id="phone" v-model="formData.phone" />
           <span>Введите номер телефона</span>
         </div>
-        <div class="form-control required" :class="{
-			'error': v$.email.$error && v$.email.$dirty
-        }">
+        <div
+          class="form-control required"
+          :class="{
+            error: v$.email.$error && v$.email.$dirty,
+          }"
+        >
           <label for="email">Email</label>
-          <input type="email" id="email" v-model="formData.email"  />
+          <input type="email" id="email" v-model="formData.email" />
           <span>Введите E-Mail</span>
         </div>
-        <div class="form-control required" :class="{
-			'error': v$.city.$error && v$.city.$dirty
-        }">
+        <div
+          class="form-control required"
+          :class="{
+            error: v$.city.$error && v$.city.$dirty,
+          }"
+        >
           <label for="city">город</label>
-          <input type="text" id="city" v-model="formData.city"  />
+          <input type="text" id="city" v-model="formData.city" />
           <span>Введите название города</span>
         </div>
-        <div class="form-control required lg:col-span-2" :class="{
-			'error': v$.message.$error && v$.message.$dirty
-        }">
+        <div
+          class="form-control required"
+          :class="{
+            error: v$.message.$error && v$.message.$dirty,
+          }"
+        >
           <label for="message">сообщение</label>
           <textarea id="message" v-model="formData.message" rows="4"></textarea>
           <span>Введите ваше сообщение</span>
@@ -118,13 +141,13 @@ const sendForm = async () => {
           >
             Отправить
           </button>
-<!--          <button-->
-<!--            class="btn whitespace-nowrap"-->
-<!--            type="button"-->
-<!--            @click="step = 'error'"-->
-<!--          >-->
-<!--            Показать ошибку (тест)-->
-<!--          </button>-->
+          <!--          <button-->
+          <!--            class="btn whitespace-nowrap"-->
+          <!--            type="button"-->
+          <!--            @click="step = 'error'"-->
+          <!--          >-->
+          <!--            Показать ошибку (тест)-->
+          <!--          </button>-->
         </div>
       </form>
     </div>
