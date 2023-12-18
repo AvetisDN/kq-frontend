@@ -18,6 +18,13 @@ import "vue-toastification/dist/index.css";
 
 axios.defaults.baseURL = import.meta.env.VITE_API_DOMAIN;
 
+if(import.meta.env.VITE_BASIC_AUTH === 'true') {
+	axios.defaults.auth = {
+		username: import.meta.env.VITE_BASIC_LOGIN,
+		password: import.meta.env.VITE_BASIC_PASSWORD
+	}
+}
+
 createApp(App)
 	.component("video-background", VideoBackground)
 	.use(head)
