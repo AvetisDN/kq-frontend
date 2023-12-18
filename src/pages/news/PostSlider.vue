@@ -3,6 +3,7 @@ import "vue3-carousel/dist/carousel.css";
 import { onMounted, ref, watch } from "vue";
 import Glide from "@glidejs/glide";
 import "@glidejs/glide/dist/css/glide.core.min.css";
+import ImageBox from "./ImageBox.vue";
 
 const props = defineProps({
   items: {
@@ -51,6 +52,17 @@ watch(activeSlide, (newSlide, oldSlide) => {
     startAt: newSlide,
   });
 });
+
+const modal = ref(false);
+const bigImage = ref("");
+const openModal = (item) => {
+  bigImage.value = item;
+  modal.value = true;
+};
+const closeModal = () => {
+  bigImage.value = "";
+  modal.value = false;
+};
 </script>
 
 <template>
@@ -71,8 +83,17 @@ watch(activeSlide, (newSlide, oldSlide) => {
     <div class="glide2">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
-          <li v-for="(item, index) in items" :key="index" class="glide__slide">
-            <img :src="item" alt="" class="max-h-full object-cover" />
+          <li
+            v-for="(item, index) in items"
+            :key="index"
+            class="glide__slide cursor-pointer"
+            @click="openModal(item)"
+          >
+            <img
+              :src="item"
+              alt=""
+              class="h-[240px] xl:h-[280px] 2xl:h-[320px] w-full object-cover"
+            />
           </li>
           <!--          <li class="glide__slide">
             <img src="/images/about/slider2.jpg" alt="" />
@@ -99,6 +120,7 @@ watch(activeSlide, (newSlide, oldSlide) => {
       </div>
     </div>
   </div>
+  <ImageBox v-if="modal" :closeModal="closeModal" :bigImage="bigImage" />
 </template>
 
 <style></style>

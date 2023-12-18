@@ -52,7 +52,7 @@ const dummyGroups = [
       {
         id: 4,
         title: "KQSN",
-        image: "/images/products/1/product4.png",
+        image: "/images/products/1/product4/2.png",
       },
       {
         id: 5,

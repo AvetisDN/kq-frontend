@@ -8,7 +8,7 @@
         to="/product/10"
         class="relative hover:outline hover:outline-shade-300"
       >
-        <img class="mx-auto" src="/images/about/top1.png" alt="" />
+        <img class="mx-auto" src="/images/top-products/WQ.png" alt="" />
         <h4
           class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
         >
@@ -19,7 +19,7 @@
         to="/product/12"
         class="relative hover:outline hover:outline-shade-300"
       >
-        <img class="mx-auto" src="/images/about/top2.png" alt="" />
+        <img class="mx-auto" src="/images/top-products/WQS.png" alt="" />
         <h4
           class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
         >
@@ -30,7 +30,7 @@
         to="/product/17"
         class="relative hover:outline hover:outline-shade-300"
       >
-        <img class="mx-auto" src="/images/about/top3.png" alt="" />
+        <img class="mx-auto" src="/images/top-products/KQSN.png" alt="" />
         <h4
           class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
         >
@@ -41,7 +41,7 @@
         to="/product/1"
         class="relative hover:outline hover:outline-shade-300"
       >
-        <img class="mx-auto" src="/images/about/top4.png" alt="" />
+        <img class="mx-auto" src="/images/top-products/KQDP.png" alt="" />
         <h4
           class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
         >

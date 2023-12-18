@@ -2,20 +2,6 @@ import moment from "moment";
 
 export const newsData = [
   {
-    id: 12,
-    title:
-      'Вебинар "Современные насосные решения от ведущего китайского концерна KAIQUAN"',
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aspernatur at beatae debitis doloribus ducimus earum eos et illum iste laboriosam non quae quas quia quo reprehenderit soluta, velit.",
-    video: `<iframe width="100%" height="400px"
-                        src="https://www.youtube.com/embed/YP0jaxEQd08?si=dxk6JergIABd7gy3"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>`,
-    date: "22.08.23",
-    category: "video",
-  },
-  {
     id: 1,
     title:
       "Участие в 1-м Петербургском профессиональном семинаре для проектировщиков",
@@ -260,5 +246,19 @@ export const newsData = [
 <p>Данный материал вы можете увидеть по ссылке:</p>
 <p><a href="http://office.abok.ru/journal/2023/Santeh_2023_5.pdf" target="_blank">http://office.abok.ru/journal/2023/Santeh_2023_5.pdf</a></p>
 <p><a href="/documents/Excursion to production.pdf" target="_blank" download="Экскурсия на производство">Или скачать</a></p>`,
+  },
+  {
+    id: 12,
+    title:
+      'Вебинар "Современные насосные решения от ведущего китайского концерна KAIQUAN"',
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aspernatur at beatae debitis doloribus ducimus earum eos et illum iste laboriosam non quae quas quia quo reprehenderit soluta, velit.",
+    video: `<iframe width="100%" height="400px"
+                        src="https://www.youtube.com/embed/YP0jaxEQd08?si=dxk6JergIABd7gy3"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>`,
+    date: "22.08.23",
+    category: "video",
   },
 ];

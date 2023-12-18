@@ -294,10 +294,10 @@ export const products = [
       title: "ВОДОСНАБЖЕНИЕ И ПОВЫШЕНИЕ ДАВЛЕНИЯ",
     },
     images: [
+      "/images/products/1/product4/4.png",
       "/images/products/1/product4/1.png",
       "/images/products/1/product4/2.png",
       "/images/products/1/product4/3.png",
-      "/images/products/1/product4/4.png",
       "/images/products/1/product4/5.png",
       "/images/products/1/product4/6.png",
       "/images/products/1/product4/7.png",

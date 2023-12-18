@@ -31,7 +31,11 @@ router.afterEach(() => {
     <div class="sticky top-0 z-50 bg-white">
       <Header />
     </div>
-    <router-view></router-view>
+    <div
+      class="lg:min-h-[calc(100vh-65px)] xl:min-h-[calc(100vh-73px)] 2xl:min-h-[calc(100vh-84px)]"
+    >
+      <router-view></router-view>
+    </div>
     <CallToAction />
     <Footer />
   </div>
