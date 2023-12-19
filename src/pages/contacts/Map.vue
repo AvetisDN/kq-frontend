@@ -53,7 +53,7 @@ const baloonTemplate = (location) => {
                   Array.isArray(location.phone)
                     ? location.phone[0]
                     : location.phone
-                }></span>
+                }</span>
               </div>
               <div class="flex gap-2">
                 <span class="">E-Mail:</span>
@@ -61,7 +61,7 @@ const baloonTemplate = (location) => {
                   Array.isArray(location.email)
                     ? location.email[0]
                     : location.email
-                }></span>
+                }</span>
               </div>
               
               ${
@@ -77,13 +77,13 @@ const baloonTemplate = (location) => {
                 <span class="">Телефон:</span>
                 <span class="font-bold">${
                   Array.isArray(location.phone) && location.phone[1]
-                }></span>
+                }</span>
               </div>
               <div class="flex gap-2">
                 <span class="">E-Mail:</span>
                 <span class="font-bold">${
                   Array.isArray(location.email) && location.email[1]
-                }></span>
+                }</span>
               </div>`
                   : ""
               }
