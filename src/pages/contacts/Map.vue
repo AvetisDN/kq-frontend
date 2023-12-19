@@ -28,6 +28,8 @@ const mapSettings = {
     zoom,
   },
   zoomRange: { min: 5, max: 15 },
+	enterprise: false,
+	version: '2.1'
 };
 
 const mapObj = shallowRef(null);

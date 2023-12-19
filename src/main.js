@@ -38,6 +38,8 @@ createApp(App)
   .use(
     createYmaps({
       apikey: import.meta.env.VITE_MAP_KEY,
+        enterprise: false,
+        version: '2.1'
     })
   )
   .mount("#app");
