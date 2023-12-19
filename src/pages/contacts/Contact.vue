@@ -3,10 +3,11 @@ import Map from "./Map.vue";
 import Feedback from "./Feedback.vue";
 import Breadcrumbs from "../../components/Breadcrumbs.vue";
 import { useHead } from "@vueuse/head";
-import {onMounted, computed, ref} from "vue";
-import axios from "axios"
+import { onMounted, computed, ref } from "vue";
+import axios from "axios";
 
-import {contactsStore} from "./contactsStore";
+import { contactsStore } from "./contactsStore";
+import Persons from "./Persons.vue";
 
 const store = contactsStore();
 
@@ -23,12 +24,12 @@ useHead({
   ],
 });
 
-onMounted( async () => {
-	const {data} = await axios.get('/api/contacts');
-	store.data = data.data;
-	contact.value = data.data.contacts;
-	contactLoaded.value = true;
-})
+onMounted(async () => {
+  const { data } = await axios.get("/api/contacts");
+  store.data = data.data;
+  contact.value = data.data.contacts;
+  contactLoaded.value = true;
+});
 </script>
 
 <template>
@@ -49,7 +50,7 @@ onMounted( async () => {
         <div class="grow">
           <h4 class="text-sm font-normal mb-4">Телефон</h4>
           <p v-for="item in contact.phones">
-            <a :href="'tel:'+item.phone">{{ item.phone }}</a>
+            <a :href="'tel:' + item.phone">{{ item.phone }}</a>
           </p>
         </div>
         <div class="grow mt-10 sm:mt-0">
@@ -91,7 +92,7 @@ onMounted( async () => {
       </div>
     </div>
     <div
-      class="flex flex-col md:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6 items-start"
+      class="flex flex-col lg:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6 items-start"
     >
       <div
         class="lg:basis-1/2 flex flex-col gap-4 lg:gap-6 xl:gap-10 2xl:gap-14 3xl:gap-20 basis-1/2"
@@ -140,13 +141,14 @@ onMounted( async () => {
           </li>
         </ul>
       </div>
+      <Map />
       <!-- <div
         class="flex grow md:basis-1/2 bg-cover bg-center rounded xl:rounded-lg"
         style="background-image: url(/images/contact/img1.jpg)"
       ></div> -->
     </div>
     <div class="mt-40">
-      <Map />
+      <Persons />
       <Feedback />
     </div>
   </div>

@@ -1,26 +1,29 @@
 export const cities = [
   {
     name: "Москва",
-    person: "Дмитрий Назаров",
-    phone: "8(495)183-88-83 доб. 104",
-    email: "d.nazarov@kaiquan.com.cn",
-    photo: "/images/persons/nazarov_dmitriy.jpg",
+    person: ["Дмитрий Назаров", "Алексей Пономарев"],
+    phone: ["8(495)183-88-83 доб. 104", "8(495)183-88-83 доб. 104"],
+    email: ["d.nazarov@kaiquan.com.cn", "a.ponomarev@kaiquan.com.cn"],
+    photo: [
+      "/images/persons/nazarov_dmitriy.jpg",
+      "/images/persons/ponomarev_aleksey.jpg",
+    ],
     geo: {
       lat: 55.803479,
       lon: 37.390514,
     },
   },
-  {
-    name: "Москва",
-    person: "Алексей Пономарев",
-    phone: "8(495)183-88-83 доб. 104",
-    email: "a.ponomarev@kaiquan.com.cn",
-    photo: "/images/persons/ponomarev_aleksey.jpg",
-    geo: {
-      lat: 55.803479,
-      lon: 37.390514,
-    },
-  },
+  // {
+  //   name: "Москва",
+  //   person: "Алексей Пономарев",
+  //   phone: "8(495)183-88-83 доб. 104",
+  //   email: "a.ponomarev@kaiquan.com.cn",
+  //   photo: "/images/persons/ponomarev_aleksey.jpg",
+  //   geo: {
+  //     lat: 55.803479,
+  //     lon: 37.390514,
+  //   },
+  // },
   {
     name: "Санкт-Петербург",
     person: "Паламарчук Андрей",
