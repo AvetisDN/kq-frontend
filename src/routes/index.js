@@ -8,6 +8,7 @@ import ProductGroups from "../pages/products/ProductGroups.vue";
 import ProductGroup from "../pages/products/ProductGroup.vue";
 import Product from "../pages/products/Product.vue";
 import PrivacyPolicy from "../pages/static/PrivacyPolicy.vue";
+import MapVue from "../pages/contacts/Map.vue";
 
 const routes = [
   {
@@ -51,6 +52,10 @@ const routes = [
   {
     path: "/policy",
     component: PrivacyPolicy,
+  },
+  {
+    path: "/map",
+    component: MapVue,
   },
 ];
 export const router = createRouter({
