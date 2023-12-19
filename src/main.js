@@ -3,12 +3,23 @@ import "./style.css";
 import App from "./App.vue";
 import { createHead } from "@vueuse/head";
 import { router } from "./routes/index.js";
-import { createYmaps } from "vue-yandex-maps";
 import { createPinia } from "pinia";
 import VideoBackground from "vue-responsive-video-background-player";
-
+import YmapPlugin from 'vue-yandex-maps'
 const head = createHead();
-
+const center = [55.450797, 52.909868];
+const zoom = 5;
+const mapSettings = {
+  apiKey: '',
+  lang: "ru_RU",
+  location: {
+    center,
+    zoom,
+  },
+  zoomRange: { min: 5, max: 15 },
+  enterprise: false,
+  version: '2.1'
+};
 import axios from "axios";
 import VueAxios from "vue-axios";
 const pinia = createPinia();
@@ -33,13 +44,7 @@ createApp(App)
   .use(Toast, {
     hideProgressBar: true,
   })
+    .use(YmapPlugin, mapSettings)
   .use(pinia)
   .provide("axios", axios)
-  .use(
-    createYmaps({
-      apikey: import.meta.env.VITE_MAP_KEY,
-        enterprise: false,
-        version: '2.1'
-    })
-  )
   .mount("#app");

@@ -1,12 +1,7 @@
 <script setup>
 import {
-  YandexMap,
-  YandexMapControls,
-  YandexMapDefaultSchemeLayer,
-  YandexMapDefaultFeaturesLayer,
-  YandexMapZoomControl,
-  YandexMapMarker,
-  YandexMapDefaultMarker,
+  yandexMap,
+  ymapMarker,
 } from "vue-yandex-maps";
 import { cities } from "./citiesData";
 import { computed, onMounted, shallowRef, ref } from "vue";
@@ -23,10 +18,8 @@ const zoom = 5;
 const mapSettings = {
   apiKey: import.meta.env.VITE_MAP_KEY,
   lang: "ru_RU",
-  location: {
-    center,
-    zoom,
-  },
+	coords: center,
+	zoom: zoom,
   zoomRange: { min: 5, max: 15 },
 	enterprise: false,
 	version: '2.1'
@@ -34,6 +27,42 @@ const mapSettings = {
 
 const mapObj = shallowRef(null);
 const openMarker = ref(null);
+const openMarkerFn = (index) => {
+	openMarker.value = index;
+	let location = cities[openMarker.value];
+}
+const baloonTemplate = (location) => {
+	return  `<div class="relative">
+            <img
+              alt=""
+              src="/images/location.png"
+              style="
+              min-width: 50px;
+              position: relative;
+              box-sizing: border-box;
+
+              cursor: pointer;"
+            />
+            <div>
+              <div class="flex gap-2">
+                <span class="">Город:</span>
+                <span class="font-bold">${location.name}</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="">Представитель:</span>
+                <span class="font-bold">${location.person}</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="">Телефон:</span>
+                <span class="font-bold">${location.phone}</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="">E-Mail:</span>
+                <span class="font-bold">${location.email}</span>
+              </div>
+            </div>
+          </div>`
+};
 </script>
 
 <template>
@@ -43,64 +72,21 @@ const openMarker = ref(null);
       <yandex-map
         v-model="mapObj"
         :settings="mapSettings"
+        :coords="center"
+        :zoom="zoom"
+        style="height: calc(100vh - 200px)"
         :height="'calc(100vh - 200px)'"
       >
-        <yandex-map-default-scheme-layer :settings="{ theme: 'light' }" />
-        <yandex-map-default-features-layer />
-        <yandex-map-controls :settings="{ position: 'right' }">
-          <yandex-map-zoom-control />
-        </yandex-map-controls>
-        <yandex-map-marker
+        <ymap-marker
           v-for="(location, index) in cities"
-          :settings="{
-            coordinates: [location.geo.lon, location.geo.lat],
-            onClick: () => (openMarker = index),
-            zIndex: openMarker === index ? 1 : 0,
-          }"
+          :coords="[location.geo.lat, location.geo.lon]"
+          @click="openMarkerFn(index)"
           :key="index"
+          :marker-id="index"
+          :balloon-template="baloonTemplate(location)"
         >
-          <div class="relative">
-            <img
-              alt=""
-              :src="'/images/location.png'"
-              :style="{
-                minWidth: '50px',
-                position: 'relative',
-                boxSizing: 'border-box',
-                transform: 'translate(-50%, calc(-50% - 24px))',
-                cursor: 'pointer',
-              }"
-            />
-            <div
-              v-if="openMarker === index"
-              class="absolute bg-white px-3 py-2 rounded-md shadow-md top-1 left-0 -translate-x-1/2 flex flex-col gap-0.5 whitespace-nowrap"
-              @click.stop="openMarker = null"
-            >
-              <button
-                @click.stop="openMarker = null"
-                class="absolute top-1 right-2 text-2xl"
-              >
-                &times;
-              </button>
-              <div class="flex gap-2">
-                <span class="">Город:</span>
-                <span class="font-bold">{{ location.name }}</span>
-              </div>
-              <div class="flex gap-2">
-                <span class="">Представитель:</span>
-                <span class="font-bold">{{ location.person }}</span>
-              </div>
-              <div class="flex gap-2">
-                <span class="">Телефон:</span>
-                <span class="font-bold">{{ location.phone }}</span>
-              </div>
-              <div class="flex gap-2">
-                <span class="">E-Mail:</span>
-                <span class="font-bold">{{ location.email }}</span>
-              </div>
-            </div>
-          </div>
-        </yandex-map-marker>
+
+        </ymap-marker>
       </yandex-map>
     </div>
     <!--		<div class="-mx-4 lg:-mx-6 xl:-mx-8 2xl:-mx-10">-->
