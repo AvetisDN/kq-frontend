@@ -37,7 +37,7 @@ createApp(App)
   .provide("axios", axios)
   .use(
     createYmaps({
-      apikey: "9fa90fbc-ce5f-4dc9-ae6d-433e0ec7338b",
+      apikey: import.meta.env.VITE_MAP_KEY,
     })
   )
   .mount("#app");

@@ -21,7 +21,7 @@ const center = [55.450797, 52.909868];
 const zoom = 5;
 
 const mapSettings = {
-  apiKey: "9fa90fbc-ce5f-4dc9-ae6d-433e0ec7338b",
+  apiKey: import.meta.env.VITE_MAP_KEY,
   lang: "ru_RU",
   location: {
     center,
