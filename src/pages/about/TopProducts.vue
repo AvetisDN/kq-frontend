@@ -8,49 +8,65 @@
         to="/product/10"
         class="relative hover:outline hover:outline-shade-300"
       >
-        <img class="mx-auto" src="/images/top-products/WQ.png" alt="" />
+        <img
+          class="mx-auto h-[320px] w-full object-contain"
+          src="/images/top-products/WQ.png"
+          alt=""
+        />
         <h4
-          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
+          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold mt-4 w-full text-center"
         >
           WQ
         </h4>
       </router-link>
       <router-link
         to="/product/12"
-        class="relative hover:outline hover:outline-shade-300"
+        class="relative hover:outline hover:outline-shade-300 pb-6"
       >
-        <img class="mx-auto" src="/images/top-products/WQS.png" alt="" />
+        <img
+          class="mx-auto h-[320px] w-full object-contain"
+          src="/images/top-products/WQS.png"
+          alt=""
+        />
         <h4
-          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
+          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold mt-4 w-full text-center"
         >
           WQS
         </h4>
       </router-link>
       <router-link
         to="/product/17"
-        class="relative hover:outline hover:outline-shade-300"
+        class="relative hover:outline hover:outline-shade-300 pb-6"
       >
-        <img class="mx-auto" src="/images/top-products/KQSN.png" alt="" />
+        <img
+          class="mx-auto h-[320px] w-full object-contain"
+          src="/images/top-products/KQSN.png"
+          alt=""
+        />
         <h4
-          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
+          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold mt-4 w-full text-center"
         >
           KQSN
         </h4>
       </router-link>
       <router-link
         to="/product/1"
-        class="relative hover:outline hover:outline-shade-300"
+        class="relative hover:outline hover:outline-shade-300 pb-6"
       >
-        <img class="mx-auto" src="/images/top-products/KQDP.png" alt="" />
+        <img
+          class="mx-auto h-[320px] w-full object-contain"
+          src="/images/top-products/KQDP.png"
+          alt=""
+        />
         <h4
-          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold absolute bottom-14 lg:bottom-2 xl:bottom-10 w-full text-center"
+          class="text-xl lg:text-2xl 2xl:text-[32px] font-bold mt-4 w-full text-center"
         >
           KQDP
         </h4>
       </router-link>
     </div>
     <div class="flex justify-center">
-      <router-link to="/products" class="btn-large mt-10 mx-auto">
+      <router-link to="/products" class="btn-large mt-10 mx-auto pb-6">
         смотреть все продукты
       </router-link>
     </div>

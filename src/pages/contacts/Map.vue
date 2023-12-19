@@ -1,8 +1,5 @@
 <script setup>
-import {
-  yandexMap,
-  ymapMarker,
-} from "vue-yandex-maps";
+import { yandexMap, ymapMarker } from "vue-yandex-maps";
 import { cities } from "./citiesData";
 import { computed, onMounted, shallowRef, ref } from "vue";
 import { contactsStore } from "./contactsStore";
@@ -18,21 +15,21 @@ const zoom = 5;
 const mapSettings = {
   apiKey: import.meta.env.VITE_MAP_KEY,
   lang: "ru_RU",
-	coords: center,
-	zoom: zoom,
+  coords: center,
+  zoom: zoom,
   zoomRange: { min: 5, max: 15 },
-	enterprise: false,
-	version: '2.1'
+  enterprise: false,
+  version: "2.1",
 };
 
 const mapObj = shallowRef(null);
 const openMarker = ref(null);
 const openMarkerFn = (index) => {
-	openMarker.value = index;
-	let location = cities[openMarker.value];
-}
+  openMarker.value = index;
+  let location = cities[openMarker.value];
+};
 const baloonTemplate = (location) => {
-	return  `<div class="relative">
+  return `<div class="relative">
             <img
               alt=""
               src="/images/location.png"
@@ -61,7 +58,7 @@ const baloonTemplate = (location) => {
                 <span class="font-bold">${location.email}</span>
               </div>
             </div>
-          </div>`
+          </div>`;
 };
 </script>
 
@@ -85,7 +82,6 @@ const baloonTemplate = (location) => {
           :marker-id="index"
           :balloon-template="baloonTemplate(location)"
         >
-
         </ymap-marker>
       </yandex-map>
     </div>
