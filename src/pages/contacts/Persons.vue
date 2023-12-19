@@ -10,6 +10,7 @@ const contactData = computed(() => {
 
 <template>
   <div class="my-8 lg:my-10 xl:my-12 3xl:my-14">
+    <h2 class="line">ПРЕДСТАВИТЕЛЬСТВА В РФ И РБ</h2>
     <div v-for="item in contactData.agencies">
       <div
         class="flex 3xl:gap-32 2xl:gap-24 xl:gap-20 lg:gap-16 md:gap-12 gap-4 flex-col md:flex-row"
