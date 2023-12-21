@@ -189,7 +189,7 @@ const getGroupData = () => {
           url: '/products',
         },
         {
-          title: currentGroup.title.split(' ').slice(0, 4).join(' ') + '...',
+          title: currentGroup.title, //.split(' ').slice(0, 4).join(' ') + '...',
         },
       ]"
     />

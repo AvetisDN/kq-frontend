@@ -14,31 +14,30 @@ import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
 
-
 onMounted(() => {
-    getProductData();
-    useHead({
-        title: `KQ Pumps :: ${product.value.name}`,
-        meta: [
-            {
-                name: `description`,
-                content: "this is product page",
-            },
-        ],
-    });
+  getProductData();
+  useHead({
+    title: `KQ Pumps :: ${product.value.name}`,
+    meta: [
+      {
+        name: `description`,
+        content: "this is product page",
+      },
+    ],
+  });
 });
 
 const product = ref({
-    loaded: false,
-})
+  loaded: false,
+});
 
 const activeTab = ref(0);
 
 const changeTab = (n) => (activeTab.value = n);
 
 const getProductData = () => {
-    product.value = products.find(item => +item.id === +route.params.id);
-    product.value.loaded = true;
+  product.value = products.find((item) => +item.id === +route.params.id);
+  product.value.loaded = true;
 };
 </script>
 
@@ -55,7 +54,7 @@ const getProductData = () => {
           url: `/products/${product.group.id}`,
         },
         {
-          title: product.name.split(' ').slice(0, 4).join(' ') + '...',
+          title: product.name, //.split(' ').slice(0, 4).join(' ') + '...',
         },
       ]"
     />
