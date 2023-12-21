@@ -11,7 +11,11 @@
         to="/products/1"
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
-        <img src="/images/home/prod-1.png" alt="" />
+        <img
+          src="/images/home/prod-1.png"
+          class="h-[360px] w-full object-contain"
+          alt=""
+        />
         <h4
           class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
         >
@@ -22,7 +26,11 @@
         to="/products/2"
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
-        <img src="/images/home/prod-2.png" alt="" />
+        <img
+          src="/images/home/prod-2.png"
+          class="h-[360px] w-full object-contain"
+          alt=""
+        />
         <h4
           class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
         >
@@ -33,7 +41,11 @@
         to="/products/3"
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
-        <img src="/images/home/prod-3.png" alt="" />
+        <img
+          src="/images/home/prod-3.png"
+          class="h-[360px] w-full object-contain"
+          alt=""
+        />
         <h4
           class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
         >
@@ -44,7 +56,11 @@
         to="/products/4"
         class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
       >
-        <img src="/images/home/prod-4.png" alt="" />
+        <img
+          src="/images/home/prod-4.png"
+          class="h-[360px] w-full object-contain"
+          alt=""
+        />
         <h4
           class="font-bold uppercase text-xl lg:text-2xl xl:text-3xl text-center"
         >

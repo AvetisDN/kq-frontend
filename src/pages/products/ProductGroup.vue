@@ -124,7 +124,7 @@ const dummyGroups = [
       {
         id: 17,
         title: "KQSN",
-        image: "/images/products/1/product4.png",
+        image: "/images/products/3/product3/2.png",
       },
       {
         id: 18,
@@ -209,7 +209,11 @@ const getGroupData = () => {
             :key="prod.id"
             class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
           >
-            <img :src="prod.image" alt="" class="object-cover" />
+            <img
+              :src="prod.image"
+              alt=""
+              class="h-[320px] 3xl:h-[360px] w-full object-contain"
+            />
             <h4
               class="font-bold uppercase text-base lg:text-xl 2xl:text-2xl text-center"
             >

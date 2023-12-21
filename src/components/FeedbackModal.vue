@@ -74,14 +74,14 @@ const sendForm = async () => {
       @click="toggleModal"
     ></div>
     <div
-      class="mx-auto w-full max-w-[860px] relative bg-shade-100 p-4 lg:p-6 3xl:p-10 max-h-screen overflow-auto"
+      class="mx-auto w-full max-w-[860px] relative rounded bg-shade-100 p-4 lg:p-6 3xl:p-8 max-h-screen overflow-auto"
     >
       <button @click="toggleModal" class="absolute top-0 right-1 p-2 xl:p-4">
         <i class="icon-close text-lg lg:text-xl 3xl:text-3xl"></i>
       </button>
-      <h2 class="line">{{ title || "Связаться с нами" }}</h2>
+      <h2 class="line mb-4">{{ title || "Связаться с нами" }}</h2>
       <form
-        class="grid grid-cols-1 gap-3 lg:gap-4 modal-form"
+        class="grid grid-cols-1 gap-2 lg:gap-3 modal-form"
         @submit.prevent="sendForm"
       >
         <div
@@ -131,7 +131,7 @@ const sendForm = async () => {
           }"
         >
           <label for="message">сообщение</label>
-          <textarea id="message" v-model="formData.message" rows="4"></textarea>
+          <textarea id="message" v-model="formData.message" rows="3"></textarea>
           <span>Введите ваше сообщение</span>
         </div>
         <div class="flex gap-6">

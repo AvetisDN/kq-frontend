@@ -29,7 +29,7 @@ const props = defineProps({
 
 <style>
 .news-item {
-  @apply flex flex-col gap-4 items-start xl:mb-8 2xl:mb-10 3xl:mb-14;
+  @apply flex flex-col gap-4 items-start xl:mb-8 2xl:mb-10 3xl:mb-14  max-h-[724px] overflow-hidden;
 }
 
 .news-item .date {

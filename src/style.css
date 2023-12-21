@@ -152,14 +152,14 @@
   }
 
   .form-control {
-    @apply flex flex-col gap-2 lg:gap-3 2xl:gap-4 font-medium uppercase;
+    @apply flex flex-col gap-1 lg:gap-2 2xl:gap-2 font-medium uppercase;
   }
   .form-control label {
     @apply text-sm xl:text-base;
   }
   .form-control input,
   .form-control textarea {
-    @apply outline-none bg-white text-shade-900 rounded xl:rounded-lg border border-white transition-colors hover:border-shade-900 focus:border-shade-900 text-lg p-4 lg:p-6;
+    @apply outline-none bg-white text-shade-900 rounded xl:rounded-lg border border-white transition-colors hover:border-shade-900 focus:border-shade-900 text-lg p-2 lg:p-4;
   }
   .form-control span {
     @apply text-error invisible;

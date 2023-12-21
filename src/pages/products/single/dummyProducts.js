@@ -6,7 +6,10 @@ export const products = [
       id: 1,
       title: "ВОДОСНАБЖЕНИЕ И ПОВЫШЕНИЕ ДАВЛЕНИЯ",
     },
-    images: ["/images/products/1/product1/image1.png"],
+    images: [
+      "/images/products/1/product1/image1.png",
+      "/images/products/1/product1/image2.png",
+    ],
     short:
       "Насосы KQDP (KQDQ) представляют собой вертикальные многоступенчатые насосы. с расположенными на одной линии всасывающим и нагнетательным патрубками с одинаковым условным проходом (исполнение «ин-лайн»), что обеспечивает наиболее компактную конструкцию и удобство монтажа. Данные насосы комплектуются электродвигателями классом энергоэффективности IE3/IE4, механическими уплотнения Eagle Burgmann и подшипниками SKF.",
     full: `Описание:
@@ -1344,6 +1347,11 @@ export const products = [
         name: "Каталог продукции",
         file: "/documents/catalogs/09-poghruzhnyie-osievyie-i-diaghonal-nyie-nasosy-hq-zq-2022-12-30.pdf",
         size: "10.6 МБ",
+      },
+      {
+        name: "Инструкция",
+        file: "/documents/catalogs/10-hqzq-manual.pdf",
+        size: "2.1 МБ",
       },
     ],
   },
