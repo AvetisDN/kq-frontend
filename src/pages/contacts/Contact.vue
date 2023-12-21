@@ -91,9 +91,7 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-    <div
-      class="flex flex-col lg:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6 items-start"
-    >
+    <div class="flex flex-col lg:flex-row gap-4 xl:gap-6 mt-4 xl:mt-6">
       <div
         class="lg:basis-1/2 flex flex-col gap-4 lg:gap-6 xl:gap-10 2xl:gap-14 3xl:gap-20 basis-1/2"
       >

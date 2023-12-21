@@ -28,7 +28,7 @@ const current = ref(0);
       <img
         :src="images[current]"
         alt=""
-        class="transition rounded cursor-pointer w-full max-h-[580px] object-contain object-center"
+        class="transition rounded cursor-pointer w-full h-72 md:h-80 lg:h-96 xl:h-[440px] 3xl:h-[580px] object-contain object-center"
       />
       <button
         class="absolute top-1/2 -translate-y-1/2 left-0"

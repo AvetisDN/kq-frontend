@@ -15,7 +15,11 @@ defineProps(["item"]);
         {{ item.date }}
       </div>
       <h4>{{ item.title }}</h4>
-      <p>{{ item.description }}</p>
+      <textarea
+        class="resize-none w-full overflow-hidden cursor-pointer pointer-events-none text-sm lg:text-base uppercase font-medium text-shade-300"
+        rows="4"
+        >{{ item.description }}</textarea
+      >
     </router-link>
   </li>
 </template>

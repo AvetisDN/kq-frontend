@@ -93,15 +93,16 @@ const baloonTemplate = (location) => {
 </script>
 
 <template>
-  <div class="lg:basis-1/2 mb-8 lg:mb-10 xl:mb-12 2xl:mb-14">
-    <div class="-mx-4 lg:-mx-6 xl:-mx-8 2xl:-mx-10">
+  <div class="lg:basis-1/2">
+    <div class="-mx-4 lg:-mx-6 xl:-mx-8 2xl:-mx-10 h-full">
       <yandex-map
         v-model="mapObj"
         :settings="mapSettings"
         :coords="center"
         :zoom="zoom"
         :scroll-zoom="false"
-        style="height: 600px"
+        class="h-full"
+        style="height: 700px"
       >
         <ymap-marker
           v-for="(location, index) in cities"

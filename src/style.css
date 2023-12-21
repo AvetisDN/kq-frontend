@@ -44,7 +44,7 @@
     @apply 2xl:border-l 2xl:border-r border-shade-900 flex flex-col gap-1 justify-center items-start font-bold px-4 xl:px-6 3xl:px-10;
   }
   .header-menu-container {
-    @apply absolute 2xl:relative hidden 2xl:flex grow bg-white p-4 2xl:p-0 top-full z-40;
+    @apply absolute 2xl:relative hidden 2xl:flex grow bg-white p-4 2xl:p-0 top-[calc(100%+2px)] z-40 shadow-2xl 2xl:shadow-none;
   }
   .header-menu-container.open {
     @apply flex flex-col items-start 2xl:flex-row gap-4 2xl:gap-0 w-auto right-0;

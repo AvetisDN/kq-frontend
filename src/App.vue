@@ -5,6 +5,12 @@ import CallToAction from "./components/footer/CallToAction.vue";
 import { computed, reactive } from "vue";
 import { useHead } from "@vueuse/head";
 import { useRouter } from "vue-router";
+import { storeToRefs } from "pinia";
+import { useMenuStore } from "./store/menu";
+
+const store = useMenuStore();
+const { showMenu } = storeToRefs(store);
+const { toggleMenu } = store;
 
 const metaData = reactive({
   title: "KQ Pumps",
@@ -23,6 +29,7 @@ useHead({
 const router = useRouter();
 router.afterEach(() => {
   window.scrollTo(0, 0);
+  if (showMenu.value) toggleMenu();
 });
 </script>
 

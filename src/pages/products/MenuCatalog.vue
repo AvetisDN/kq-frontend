@@ -128,7 +128,7 @@ const handleClick = (group) => router.push(`/products/${group}`);
 
 <template>
   <div class="news-types 3xl:grow 3xl:w-80 3xl:shrink-0 max-w-sm">
-    <div v-for="item in menuItems">
+    <div v-for="item in menuItems" class="relative">
       <button
         class="flex items-center justify-between gap-6 w-full"
         :class="{
@@ -161,7 +161,7 @@ const handleClick = (group) => router.push(`/products/${group}`);
       </button>
       <div
         v-if="+router.currentRoute.value.params.group === item.group"
-        class="pt-3 lg:pt-4 2xl:pt-6 pl-4 lg:pl-6 2xl:pl-10 flex flex-col gap-2 lg:gap-3 2xl:gap-4"
+        class="pt-3 lg:pt-4 2xl:pt-6 2xl:pl-10 flex 2xl:flex-col gap-2 lg:gap-3 2xl:gap-4 absolute 2xl:relative"
       >
         <button
           v-for="prod in item.products"

@@ -202,12 +202,14 @@ const getGroupData = () => {
         class="flex flex-col 2xl:flex-row gap-4 md:gap-6 xl:gap-10 2xl:gap-14 3xl:gap-24 w-full items-start"
       >
         <MenuCatalog />
-        <div class="grid grid-cols-1 lg:grid-cols-3 w-full">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-0.5 w-full mt-4 2xl:mt-0"
+        >
           <router-link
             v-for="prod in currentGroup.products"
             :to="`/product/${prod.id}`"
             :key="prod.id"
-            class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:outline hover:outline-shade-300"
+            class="flex flex-col gap-4 lg:gap-6 items-center justify-center pb-6 hover:border hover:border-shade-300"
           >
             <img
               :src="prod.image"
