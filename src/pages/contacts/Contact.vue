@@ -69,14 +69,14 @@ onMounted(async () => {
         <p>{{ contact.working_hours }}</p>
       </div>
       <div
-        class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col sm:flex-row font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
+        class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col sm:flex-row font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2 gap-2 xl:gap-6"
       >
         <div class="grow">
           <h4 class="text-sm font-normal mb-4">Отел Технической Поддержки</h4>
           <p>
-            <a href="mailto:ru_support@kaiquan.com.cn"
-              >ru_support@kaiquan.com.cn</a
-            >
+            <a href="mailto:ru_support@kaiquan.com.cn">
+              ru_support@kaiquan.com.cn
+            </a>
           </p>
         </div>
         <div class="grow mt-10 sm:mt-0">
@@ -84,9 +84,9 @@ onMounted(async () => {
             Отдел Логистики и Оформления Заказов
           </h4>
           <p>
-            <a href="mailto:ru_logistics@kaiqua.com.cn"
-              >ru_logistics@kaiqua.com.cn</a
-            >
+            <a href="mailto:ru_logistics@kaiqua.com.cn">
+              ru_logistics@kaiqua.com.cn
+            </a>
           </p>
         </div>
       </div>
