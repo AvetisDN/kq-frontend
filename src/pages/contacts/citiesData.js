@@ -2,7 +2,7 @@ export const cities = [
   {
     name: "Москва",
     person: ["Дмитрий Назаров", "Алексей Пономарев"],
-    phone: ["8(495)183-88-83 доб. 104", "8(495)183-88-83 доб. 104"],
+    phone: ["8(495)183-88-83 доб. 104", "8(495)183-88-83 доб. 114"],
     email: ["d.nazarov@kaiquan.com.cn", "a.ponomarev@kaiquan.com.cn"],
     photo: [
       "/images/persons/nazarov_dmitriy.jpg",
