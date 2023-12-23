@@ -63,7 +63,7 @@ onMounted(async () => {
     </div>
     <div class="flex flex-col lg:flex-row gap-4 xl:gap-6 mt-6">
       <div
-        class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col font-bold lg:text-lg xl:text-xl 3xl:text-2xl grow lg:basis-1/2"
+        class="bg-shade-100 p-4 md:p-5 lg:p-6 3xl:p-10 rounded xl:rounded-lg uppercase flex flex-col font-bold lg:text-lg xl:text-xl 3xl:text-2xl xl:grow lg:basis-1/2"
       >
         <h4 class="text-sm font-normal mb-4">Режим работы</h4>
         <p>{{ contact.working_hours }}</p>
@@ -80,7 +80,7 @@ onMounted(async () => {
           </p>
         </div>
         <div class="grow mt-10 sm:mt-0">
-          <h4 class="text-sm font-normal mb-4">
+          <h4 class="text-sm font-normal mb-4 whitespace-nowrap">
             Отдел Логистики и Оформления Заказов
           </h4>
           <p>

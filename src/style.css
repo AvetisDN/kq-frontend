@@ -142,10 +142,10 @@
     @apply flex flex-col gap-3 md:gap-4 lg:gap-5 xl:gap-6 3xl:gap-8 text-shade-300 uppercase;
   }
   .requisites li {
-    @apply flex flex-col xl:flex-row justify-between xl:gap-10 2xl:gap-16 3xl:gap-28;
+    @apply flex flex-col xl:flex-row justify-between xl:gap-4 2xl:gap-16 3xl:gap-28;
   }
   .requisites li span {
-    @apply xl:w-[200px];
+    @apply text-sm xl:w-[120px] 2xl:w-[200px] shrink-0 2xl:text-base;
   }
   .requisites li p {
     @apply text-shade-900 grow;

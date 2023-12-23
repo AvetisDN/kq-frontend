@@ -127,10 +127,12 @@ const handleClick = (group) => router.push(`/products/${group}`);
 </script>
 
 <template>
-  <div class="news-types 3xl:grow 3xl:w-80 3xl:shrink-0 max-w-sm">
+  <div
+    class="news-types 3xl:grow 3xl:w-80 3xl:shrink-0 max-w-sm flex flex-col md:flex-row 3xl:flex-col"
+  >
     <div v-for="item in menuItems" class="relative">
       <button
-        class="flex items-center justify-between gap-6 w-full"
+        class="flex items-center justify-between gap-1 lg:gap-6 w-full hover:text-primary"
         :class="{
           active: router.currentRoute.value.params.group == item.group,
         }"
@@ -161,12 +163,12 @@ const handleClick = (group) => router.push(`/products/${group}`);
       </button>
       <div
         v-if="+router.currentRoute.value.params.group === item.group"
-        class="pt-3 lg:pt-4 2xl:pt-6 2xl:pl-10 flex 2xl:flex-col gap-2 lg:gap-3 2xl:gap-4 absolute 2xl:relative"
+        class="pt-3 lg:pt-4 2xl:pt-6 2xl:pl-10 flex 2xl:flex-col gap-4 md:gap-2 lg:gap-3 2xl:gap-4 2xl:relative flex-wrap"
       >
         <button
           v-for="prod in item.products"
           @click="router.push(`/product/${prod.id}`)"
-          class="active"
+          class="active hover:text-primary"
         >
           {{ prod.title }}
         </button>

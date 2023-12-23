@@ -5,7 +5,12 @@ defineProps(["item"]);
 <template>
   <li class="glide__slide news-item">
     <router-link :to="`/post/${item.id}`" class="news-item">
-      <img v-if="item.category !== 'video'" :src="item.image" alt="image" />
+      <img
+        v-if="item.category !== 'video'"
+        :src="item.image"
+        alt="image"
+        class=""
+      />
       <div
         v-if="item.category === 'video'"
         v-html="item.video"
@@ -14,7 +19,11 @@ defineProps(["item"]);
       <div class="date">
         {{ item.date }}
       </div>
-      <h4>{{ item.title }}</h4>
+      <textarea
+        class="resize-none w-full overflow-hidden cursor-pointer pointer-events-none uppercase font-medium text-base lg:text-xl 3xl:text-2xl"
+        rows="3"
+        >{{ item.title }}</textarea
+      >
       <textarea
         class="resize-none w-full overflow-hidden cursor-pointer pointer-events-none text-sm lg:text-base uppercase font-medium text-shade-300"
         rows="4"
@@ -27,6 +36,9 @@ defineProps(["item"]);
 <style>
 .glide__slide.news-item {
   @apply flex flex-col gap-4 items-start mb-0;
+}
+a.news-item {
+  @apply w-full;
 }
 
 .glide__slide .date {

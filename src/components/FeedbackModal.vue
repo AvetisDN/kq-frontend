@@ -60,6 +60,7 @@ const sendForm = async () => {
     step.value = "success";
   } catch (e) {
     formSaving.value = false;
+    step.value = "error";
   }
 };
 </script>

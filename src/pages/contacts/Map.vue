@@ -101,8 +101,7 @@ const baloonTemplate = (location) => {
         :coords="center"
         :zoom="zoom"
         :scroll-zoom="false"
-        class="h-full"
-        style="height: 700px"
+        style="height: 700px; width: auto"
       >
         <ymap-marker
           v-for="(location, index) in cities"

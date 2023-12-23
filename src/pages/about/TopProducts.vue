@@ -6,7 +6,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
       <router-link
         to="/product/10"
-        class="relative hover:outline hover:outline-shade-300"
+        class="relative border-2 border-white hover:border-shade-300 pb-6"
       >
         <img
           class="mx-auto h-[320px] w-full object-contain"
@@ -21,7 +21,7 @@
       </router-link>
       <router-link
         to="/product/12"
-        class="relative hover:outline hover:outline-shade-300 pb-6"
+        class="relative border-2 border-white hover:border-shade-300 pb-6"
       >
         <img
           class="mx-auto h-[320px] w-full object-contain"
@@ -36,7 +36,7 @@
       </router-link>
       <router-link
         to="/product/17"
-        class="relative hover:outline hover:outline-shade-300 pb-6"
+        class="relative border-2 border-white hover:border-shade-300 pb-6"
       >
         <img
           class="mx-auto h-[320px] w-full object-contain"
@@ -51,7 +51,7 @@
       </router-link>
       <router-link
         to="/product/1"
-        class="relative hover:outline hover:outline-shade-300 pb-6"
+        class="relative border-2 border-white hover:border-shade-300 pb-6"
       >
         <img
           class="mx-auto h-[320px] w-full object-contain"
