@@ -228,7 +228,7 @@ const sendForm = async () => {
       <h3
         class="text-lg lg:text-xl 2xl:text-2xl fon-bold text-center uppercase font-bold"
       >
-        сообщение оправлено!
+        сообщение не оправлено!
       </h3>
       <button
         class="btn bg-primary text-white hover:bg-secondary hover:border-secondary"

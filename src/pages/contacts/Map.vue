@@ -93,8 +93,8 @@ const baloonTemplate = (location) => {
 </script>
 
 <template>
-  <div class="lg:basis-1/2">
-    <div class="-mx-4 lg:-mx-6 xl:-mx-8 2xl:-mx-10 h-full">
+  <div class="lg:basis-1/2 max-w-1/2">
+    <div class="h-full w-full">
       <yandex-map
         v-model="mapObj"
         :settings="mapSettings"
