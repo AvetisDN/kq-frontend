@@ -75,7 +75,7 @@
     @apply overflow-hidden;
   }
   .slide h2 {
-    @apply text-lg sm:text-xl md:text-3xl lg:text-3xl xl:text-5xl 3xl:text-7xl uppercase font-bold leading-[1.15em] md:leading-[1.15em] lg:leading-[1.15em] xl:leading-[1.15em] 2xl:leading-[1.15em] 3xl:leading-[1.25em] max-w-[80%];
+    @apply text-base sm:text-xl md:text-3xl lg:text-3xl xl:text-5xl 3xl:text-7xl uppercase font-bold leading-[1.15em] md:leading-[1.15em] lg:leading-[1.15em] xl:leading-[1.15em] 2xl:leading-[1.15em] 3xl:leading-[1.25em] sm:max-w-[80%];
   }
   .digits {
     @apply absolute bottom-5 right-4 hidden 2xl:flex max-w-[540px] 2xl:max-w-full md:grid md:grid-cols-2;
@@ -221,5 +221,11 @@
 @media (min-width: 1921px) and (min-height: 1164px) {
   .video-container {
     max-height: 1080px !important;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 639px) {
+  .slide h2 {
+    @apply text-lg;
   }
 }

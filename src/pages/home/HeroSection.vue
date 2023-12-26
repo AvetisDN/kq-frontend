@@ -70,7 +70,7 @@ const sliderData = [
           <img
             src="../../assets/images/lines-white.png"
             alt=""
-            class="w-40 md:w-64 lg:w-80 3xl:w-auto"
+            class="w-40 md:w-48 lg:w-80 3xl:w-auto"
           />
         </div>
         <div class="slider">
