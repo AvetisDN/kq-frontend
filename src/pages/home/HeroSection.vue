@@ -59,7 +59,7 @@ const sliderData = [
 
 <template>
   <div
-    class="aspect-video lg:aspect-auto bg-shade-900 flex justify-center items-center video-container lg:h-[calc(56vw-65px)] xl:h-[calc(56vw-73px)] 2xl:h-[calc(56vw-84px)] lg:max-h-[calc(100vh-65px)] xl:max-h-[calc(100vh-73px)] 2xl:max-h-[calc(100vh-84px)]"
+    class="aspect-video lg:aspect-auto bg-shade-900 flex justify-center items-center video-container lg:h-[calc(56vw-65px)] xl:h-[calc(56vw-73px)] 2xl:h-[calc(56vw-84px)] lg:max-h-[calc(100vh-65px)] xl:max-h-[calc(100vh-73px)] 2xl:max-h-[calc(100vh-84px)] min-h-[450px] lg:min-h-[475px] xl:min-h-[585px]"
   >
     <!-- max-h-[calc(100vh-65px)] xl:max-h-[calc(100vh-65px)] 2xl:max-h-[calc(100vh-85px)] -->
     <video-background src="/video/bg-crop.mp4" class="h-full relative">
