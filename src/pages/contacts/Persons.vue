@@ -19,7 +19,11 @@ const contactData = computed(() => {
           {{ item.city }}
         </h3>
         <div class="text-sm text-shade-300 font-medium flex gap-4">
-          <img :src="item.photo" alt="" class="h-40 border-shade-200 border" />
+          <img
+            :src="item.photo"
+            alt=""
+            class="h-40 border-shade-200 border w-[120px] object-cover"
+          />
           <div>
             <h4
               class="uppercase font-normal text-shade-900 text-base mb-2 lg:mb-3 2xl:mb-4"

@@ -29,7 +29,7 @@ export const cities = [
     person: "Паламарчук Андрей",
     phone: "8(495)183-88-83 доб. 113",
     email: "a.palamarchuk@kaiquan.com.cn",
-    photo: "/images/persons/empty.jpg",
+    photo: "/images/persons/empty.png",
     geo: {
       lat: 59.938784,
       lon: 30.314997,
@@ -62,7 +62,7 @@ export const cities = [
     person: "Крюков Денис",
     phone: "8(495)183-88-83 доб. 111",
     email: "d.krukov@kaiquan.com.cn",
-    photo: "/images/persons/empty.jpg",
+    photo: "/images/persons/empty.png",
     geo: {
       lat: 45.03547,
       lon: 38.975313,

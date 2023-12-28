@@ -17,8 +17,8 @@ export const newsData = [
     text: `<p>Уважаемые партнёры и друзья!</p>
 <p><strong class="font-bold">В эти предновогодние дни от лица сотрудников российского представительства концерна “SHANGHAI KAIQUAN PUMP (GROUP)” хотим поздравить вас с наступающим Новым Годом и Рождеством!</strong></p>
 <p>Спасибо вам за совместную работу, поддержку и веру в нас, как перспективного и надёжного поставщика высококлассного насосного оборудования.</p>
-<ul>
-    <h4>В планах российского представительства:</h4>
+<h4 class="text-lg font-semibold">В планах российского представительства:</h4>
+<ul class="flex flex-col gap-2 list-disc pl-8 -mt-3">
     <li>расширение поставок оборудования на различные объекты ЖКХ и отраслей промышленности</li>
     <li>изучение возможностей размещения сборочного производства на территории России</li>
     <li>увеличение численности подразделений нашей компании</li>
@@ -91,11 +91,11 @@ export const newsData = [
       "/images/news/post3/3.jpg",
       "/images/news/post3/4.jpg",
       "/images/news/post3/5.jpg",
-      "/images/news/post3/6.jpg",
-      "/images/news/post3/7.jpg",
-      "/images/news/post3/8.jpg",
-      "/images/news/post3/9.jpg",
-      "/images/news/post3/10.JPG",
+      "/images/news/post3/6a.jpg",
+      "/images/news/post3/7a.jpg",
+      "/images/news/post3/8a.jpg",
+      "/images/news/post3/9a.jpg",
+      "/images/news/post3/10a.jpg",
     ],
     date: "01.10.23",
     category: "news",
