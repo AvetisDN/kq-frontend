@@ -1,5 +1,16 @@
 <script setup>
+import { onBeforeUnmount, onMounted, ref } from "vue";
 defineEmits(["toggle"]);
+
+const search = ref(null);
+
+onMounted(() => {
+  if (search.value) search.value.focus();
+});
+
+onBeforeUnmount(() => {
+  search.value.blur();
+});
 </script>
 
 <template>
@@ -11,10 +22,11 @@ defineEmits(["toggle"]);
         <label for="search" class="flex gap-4 grow items-center">
           <i class="icon-search"></i>
           <input
-            autofocus
+            autocomplete="off"
             type="text"
             id="search"
-            class="focus:outline-none min-w-[50%] max-w-[100%] xl:text-lg font-600"
+            ref="search"
+            class="focus:outline-none min-w-[50%] max-w-[100%] xl:text-lg font-600 focus:bg-gray-50 p-4 font-medium"
           />
         </label>
         <button

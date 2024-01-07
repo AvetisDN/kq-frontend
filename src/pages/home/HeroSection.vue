@@ -59,12 +59,15 @@ const sliderData = [
 
 <template>
   <div
-    class="aspect-video lg:aspect-auto bg-shade-900 flex justify-center items-center video-container lg:h-[calc(56vw-65px)] xl:h-[calc(56vw-73px)] 2xl:h-[calc(56vw-84px)] lg:max-h-[calc(100vh-65px)] xl:max-h-[calc(100vh-73px)] 2xl:max-h-[calc(100vh-84px)] min-h-[450px] lg:min-h-[475px] xl:min-h-[585px]"
+    class="aspect-video lg:aspect-auto bg-shade-900 flex justify-center items-center video-container lg:h-[calc(56vw-65px)] xl:h-[calc(56vw-73px)] 2xl:h-[calc(56vw-84px)] lg:max-h-[calc(100vh-65px)] xl:max-h-[calc(100vh-73px)] 2xl:max-h-[calc(100vh-84px)] min-h-[450px] lg:min-h-[475px] xl:min-h-[585px] max-w-full"
   >
     <!-- max-h-[calc(100vh-65px)] xl:max-h-[calc(100vh-65px)] 2xl:max-h-[calc(100vh-85px)] -->
-    <video-background src="/video/bg-crop.mp4" class="h-full relative">
+    <video-background
+      src="/video/bg-crop.mp4"
+      class="h-full relative max-w-full"
+    >
       <div
-        class="absolute w-full h-full bg-black bg-opacity-80 2xl:py-[72px] xl:py-14 lg:py-10 md:py-8 py-4 2xl:px-10 xl:px-8 lg:px-6 px-4 text-white"
+        class="absolute w-full h-full bg-black bg-opacity-80 2xl:py-[72px] xl:py-14 lg:py-10 md:py-8 py-4 2xl:px-10 xl:px-8 lg:px-6 px-4 text-white max-w-full"
       >
         <div class="absolute bottom-10 md:bottom-10 right-20 md:left-0">
           <img

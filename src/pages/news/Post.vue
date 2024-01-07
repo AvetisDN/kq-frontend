@@ -20,7 +20,7 @@ onMounted(() => {
 //methods---
 const getPostData = () => {
   postData.value = newsData.find((item) => +item.id === +route.params.id);
-  console.log(postData.value);
+  // console.log(postData.value);
   postData.value.loaded = true;
 };
 </script>
